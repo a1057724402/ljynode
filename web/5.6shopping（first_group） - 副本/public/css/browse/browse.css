@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f3f0ed !important;
+    font-family: "rooney-web",Georgia,"Times New Roman",Times,serif !important;
+}
+/*左侧样式*/
+.left_style{
+    background: #ffffff ;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+}
+.margin_top1{
+    margin-top: 100px;
+}
+.margin_top2{
+    margin-top: 30px;
+}
+/*标题、文本字体*/
+.font_title1{
+    font-size: 34px;
+    font-weight: 900;
+    margin-top: 20px;
+}
+.font_title2{
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 30px;
+    margin-top: 20px;
+}
+.font_title3{
+    padding: 20px 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 900;
+}
+.font_title4{
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 80px;
+}
+.font_text1{
+    font-size: 18px;
+    line-height: 20px;
+}
+.font_text2{
+    font-size: 18px;
+    line-height: 60px;
+}
+/*下划线*/
+.border_bottom{
+    margin-top:10px;
+    border-bottom: 1px solid lightGrey;
+
+}
+/*a标签处理*/
+.a_color2{
+    color: #b42424 !important;
+}
+.a_color2:hover{
+    color: #741717 !important;
+}
+.span_color1{
+    color: #b42424 ;
+}
+
+/*右侧部分*/
+.back_style1{
+    background: rgba(255,255,255,0.53);
+    border: 1px solid #cccccc;
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.margin_left1{
+    margin-left: -15px;
+}
+
+/*列表*/
+.ul li{
+    list-style: none;
+    margin-left: 10px;
+
+}
+.ul li a{
+    display: inline-block;
+    padding-left: 40px;
+    margin: 10px 0;
+    height: 40px;
+    width: 270px;
+    background: #eee ;
+    color: #999;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+/*按钮*/
+.but_color{
+    background: #c92828 !important;
+    color: #ffffff !important;
+}
+.but_color:hover{
+    background:#9f2020 !important;
+}
+.margin_bottom{
+    margin-bottom: 40px;
+}
+@media screen and (max-width:768px){
+    .font_title1,.font_title2{
+        font-size: 16px;
+    }
+    .font_title3{
+        font-size: 12px;
+    }
+    .font_text1,.font_text2{
+        font-size: 10px;
+    }
+}

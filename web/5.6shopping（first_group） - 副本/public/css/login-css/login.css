@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-outline:none;
+}
+body {
+  background: #f3f3f3; }
+header {
+  width: 100%;
+  height: 20px;
+  background: #6e6e6e; }
+.glyphicon-home {
+  color: #ffffff;
+  font-size: 20px; }
+.content {
+  margin-top: 150px;
+}
+/*login页 左侧多图显示区*/
+.content #imgs{
+  position: relative;
+}
+.content #imgs img{
+    height: auto;
+}
+.content #imgs .hover:hover{
+  cursor: pointer;
+}
+
+/*.content #imgs .hover:active{
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  top:0;
+  -webkit-transition:all 1s;
+}*/
+
+/*login页 注册 登录框*/
+  .content .row .loginDiv, .content .row .registerDiv {
+    padding: 20px; 
+    background-image:url(../../img/login-img/login-bg.jpg);
+  }
+
+    .content .row .loginDiv form label, .content .row .registerDiv form label {
+      color: white; }
+    .content .row .loginDiv form .wrong, .content .row .registerDiv form .wrong {
+      color: #ff3300;
+      font-size: 12px; }
+    .content .row .loginDiv form .right, .content .row .registerDiv form .right {
+        color: #00b300;
+        font-size: 12px; }
+
+    .content .row .loginDiv form .divider, .content .row .registerDiv form .divider {
+      margin-top: 10px;
+      padding: 10px 0; }
+    .content .row .loginDiv form .loginBtn, .content .row .registerDiv form .loginBtn {
+      background-color: #1f9e1f;
+      color: #f3f3f3; }
+    .content .row .loginDiv form .forgetDiv, .content .row .registerDiv form .forgetDiv {
+      margin-top: 30px; }
+      .content .row .loginDiv form .forgetDiv .findCode, .content .row .registerDiv form .forgetDiv .findCode {
+        float: left; }
+      .content .row .loginDiv form .forgetDiv .toRegister, .content .row .registerDiv form .forgetDiv .toRegister {
+        float: right; }
+        .content .row .loginDiv form .forgetDiv a,.content .row .registerDiv form .toLogin{
+          color:white;
+        }
+        .content .row fieldset legend{
+          border:none;
+          color: white;
+        }
+  .content .registerDiv {
+    box-shadow: 0 0 20px #d6d6d6; }
+    .content .registerDiv .toLogin{
+      padding: 10px;
+      display: inline-block;
+      width: 100%;
+      text-align: right; 
+    }
+    .content .registerDiv .toLogin a{
+      color: #f30;
+    }

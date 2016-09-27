@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/css_public/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.min.css"/>
+
+    <link rel="stylesheet" href="css/head_foot_css/head_foot.css"/>
+    <link rel="stylesheet" href="css/login-css/about.css">
+
+</head>
+<body>
+<a name="gohead"></a>
+<div style="height: 1px"></div>
+
+<!--back to top-->
+<div class="backToTop visible-md" onclick="backTop()">
+    <div class="backToTop_img"></div>
+</div>
+
+<!--header 顶部 头部-->
+<div id="header" class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="row col-md-12 col-xs-12">
+            <div class="head_logo col-md-3 col-xs-3 visible-md">
+                <a href="#"><img src="img/head_foot/logo.png" alt="logo"/></a>
+            </div>
+            <div class="head_loginRegister col-md-6 col-md-offset-3  ">
+                <!--<input type="button" value="Login" />-->
+                <!--<input type="button" value="Register"/>-->
+                <p class="col-md-12">
+                    <strong class="col-md-3 visible-md">Hi!&nbsp;hello:&nbsp;&nbsp;</strong>
+                    <span id="sessionSpan" class="col-md-3 ">请登录！</span>
+
+                    <input type="button" value="退出" onclick="outSession()" class="col-md-1  "/>
+
+                    <small class="col-md-4 visible-md" onclick="personalCenterOne()"><a href="#">[个人中心]</a></small>
+                </p>
+            </div>
+            <div class="head_button col-md-3 col-xs-7 col-xs-offset-2 visible-xs" >
+                <input type="button"  value="菜单" data-toggle="collapse" data-target=".nav-collapse">
+                <a href="login.html"><input type="button" value="登陆"/></a>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-md">
+            <div class="head_nav ">
+                <ul class="col-md-10 col-xs-4 nav pull-right nav-pills  ">
+                    <li ><a href="login.html">登陆/注册</a></li>
+                    <!--<li><a href="aboutUs.html">关于我们</a></li>-->
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            关于 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="wineBasic.html">信息&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="browse.html">浏览&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="aboutUs.html">关于我们&emsp;&emsp;</a></li>
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <li ><a href="index.html">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-xs">
+            <div class="head_nav1 nav-collapse collapse">
+                <ul class=" col-xs-12 col-xs-offset-2 nav pull-left">
+                    <li><a href="index.html">首页</a></li>
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <!--<li><a href="login.html">登陆/注册</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+    <div id="wrapper" class="container">
+        <!--中部 content 内容区-->
+        <div class="content">
+        <!-- 内容区 二级菜单 开始 -->
+            <div id="about-subNav" class="hidden-xs">
+                <ul class="list-inline text-center" >
+                    <a href="#purpose" class="purpose"><li class="col-md-3 point">宗旨</li></a>
+                    <a href="#experience" class="experience"><li class="col-md-3">成长经历</li></a>
+                    <a href="#team" class="team"><li class="col-md-3">家园成员</li></a>
+                    <a href="#contact" class="contact"><li class="col-md-3">联系</li></a>
+                </ul>
+                <span class="pointer col-md-12"></span>
+            </div>
+        <!-- 内容区 二级菜单 结束 -->
+            <div class="row" id="purpose">
+                <h3>Our purpose</h3>
+                <div>
+                    <img src="img/login-img/21.jpg" alt="公司简介" />
+                    <p>我们是电子商务平台网站，专注于提供最高质的红酒信息、红酒网上在线交易互联网服务。
+                        专注于提供最高质的红酒信息、红酒网上在线交易互联网服务。</p>
+                    <p>我们是电子商务平台网站，专注于提供最高质的红酒信息、红酒网上在线交易互联网服务。
+                        专注于提供最高质的红酒信息、红酒网上在线交易互联网服务。
+                        红酒网上在线交易互联网服务。红酒网上在线交易互联网服务。红酒网上在线交易互联网服务。红酒网上在线交易互联网服务。红酒网上在线交易互联网服务。红酒网上在线交易互联网服务。</p>
+                </div>
+            </div>
+
+            <div class="row" id="experience">
+                <h3>experience</h3>
+                <ul class="list-unstyled">
+                    <li>2014年4月23日 红蝙蝠beta版上线</li>
+                    <li>2015年4月23日 红蝙蝠beta1.0版上线</li>
+                    <li>2015年9月23日 红蝙蝠beta正式版上线</li>
+                    <li>2016年4月23日 红蝙蝠获天使投资500万</li>
+                    <li>2016年10月1日 红蝙蝠成功上市 晋升成都10强互联网企业</li>
+                </ul>
+            </div>
+
+            <div id="team" class="row">
+                <h3>Out team</h3>
+                <ul class="list-unstyled">
+                    <li class="col-xs-12">
+                        <img src="img/login-img/21.jpg" alt="刘文"/>
+                        <span>刘文</span>
+                    </li>
+                    <li >
+                        <img src="img/login-img/21.jpg" alt="刘文"/>
+                        <span>刘家营</span>
+                    </li>
+                    <li >
+                        <img src="img/login-img/21.jpg" alt="刘文"/>
+                        <span>陈程</span>
+                    </li>
+                    <li >
+                        <img src="img/login-img/21.jpg" alt="刘文"/>
+                        <span>文灿</span>
+                    </li>
+                    <li >
+                        <img src="img/login-img/21.jpg" alt="刘文"/>
+                        <span>熊鑫鑫</span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="row" id="contact">
+                <h3>contact</h3>
+                <table>
+                    <tr>
+                        <td>电话</td>
+                        <td>028-26589877</td>
+                    </tr>
+                    <tr>
+                        <td>邮箱</td>
+                        <td>redBate@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>地址</td>
+                        <td>成都市环球中心</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--footer 底部-->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <img src="img/head_foot/footLogn.png" alt="logo"/>
+                <p>从2011年开始我们创建了网络艺术管理，主要包括我们生产的葡萄酒视频
+                    , 条款列表, 和有教育性的课程.
+                </p>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>企业</h5>
+                <ul>
+                    <li><a href="aboutUs.html">关于葡萄酒</a></li>
+                    <!--<li><a href="#">Follya</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <li><a href="aboutUs.html">我们的服务</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>商业 & 媒体</h5>
+                <ul>
+                    <li><a href="#">登陆我们的网站</a></li>
+                    <!--<li><a href="#">Wine</a></li>-->
+                    <li><a href="#">内容许可</a></li>
+                    <!--<li><a href="#">Lucensing</a></li>-->
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>网站规则</h5>
+                <ul>
+                    <li><a href="#">法律法规</a></li>
+                    <!--<li><a href="#">Ethics</a></li>-->
+                    <li><a href="#">版权所有</a></li>
+                    <li><a href="#">使用条款</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <a href="#gohead" >返回页面顶部</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--public js文件-->
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/html5shiv.min.js"></script>
+<script type="text/javascript" src="js/respond.min.js"></script>
+<![endif]-->
+
+    <!--private js文件-->
+<script type="text/javascript" src="js/login_js/about.js"></script>
+<script src="js/login_js/getSession.js"></script>
+</body>
+</html>

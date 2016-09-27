@@ -1,0 +1,84 @@
+img{
+  width:100%;
+
+}
+
+
+$fonts:"Georgia";
+.main{
+ font-family:$fonts;
+  background:#edf0f3;
+}
+
+$fontcolor:"white";
+$butcolor: rgb(117, 107, 107);
+$fontsizes:20px;
+
+.seachSpan{
+  font-size:$fontsizes;
+}
+.sh{
+ margin-top:150px;
+
+}
+
+.aside{
+  border:2px solid #edf0f3;
+  margin-top:40px;
+}
+.contpro{
+  font-family: $fonts;
+  border:2px solid #edf0f3;
+  background:white;
+}
+.products{
+  height:400px;
+}
+@media screen and ( max-width:768px){
+  .sh{
+    margin-top:40px;
+  }
+  .products{
+   height:100%;
+   margin:5px;
+}
+  .promess{
+    font-size:16px;
+    color:#edf0f3;
+  }
+}
+@media screen and (min-width:768px){
+  .contpro{
+    margin:40px;
+    padding: 20px;
+  }
+}
+
+
+.ourtitle{
+   color:darkseagreen;
+   text-align: center;
+}
+.protitle{
+  text-align: center;
+  color:darkseagreen;
+}
+.promess{
+   font-size:18px;
+  text-align: center;
+  color:rgb(88,88,88);
+}
+.aside{
+  background:white;
+  padding:20px;
+}
+.asidemvc{
+  margin-top:5px;
+}
+.proimg{
+width:100%;
+height:250px;
+}
+.main{
+
+}

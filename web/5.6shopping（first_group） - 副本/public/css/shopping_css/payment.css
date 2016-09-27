@@ -1,0 +1,85 @@
+body {
+  background-color: #edf0f3; }
+.hoverCurser:hover{
+    cursor: pointer;
+}
+.paymentTable {
+  background-color: #ffffff;
+  font-size: 1em;
+  padding-bottom: 20px; }
+  .paymentTable .customInfo {
+    position: relative; }
+  .paymentTable .customLabel {
+    width: 80px;
+    margin: 10px 0; }
+  .paymentTable table {
+    text-align: center; }
+    .paymentTable table tr:first-child {
+      height: 28px; }
+    .paymentTable table .counts {
+      width: 50px; }
+
+@media screen and (min-width: 768px) {
+  .paymentTable {
+    margin-top: 135px;
+    min-height: 200px; }
+    .paymentTable .noItem {
+      margin: 90px auto;
+      text-align: center; }
+    .paymentTable .customAddress {
+      width: 600px; }
+    .paymentTable .customTel {
+      position: absolute;
+      left: 485px;
+      top: 40px; }
+    .paymentTable .customInfo {
+      padding-left: 40px; }
+    .paymentTable table .col1 {
+      width: 8.3333333%; }
+    .paymentTable table .col6 {
+      width: 41.666666%; }
+
+  table {
+    margin-top: 10px; }
+    table .tableHead {
+      font-weight: bold; }
+    table .tableItems {
+      border-bottom: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd; }
+    table .tableItems:first-child {
+      border-top: 1px solid #ddd; }
+
+  .itemCount {
+    display: inline-block; }
+
+  .pay {
+    float: right; }
+
+  .counter {
+    padding-top: 10px; } }
+@media screen and (max-width: 768px) {
+  .paymentTable {
+    min-height: 300px;
+    margin-top: 70px; }
+    .paymentTable table {
+      margin-top: 10px; }
+    .paymentTable .counts {
+      width: 50px; }
+    .paymentTable .counter {
+      padding-top: 10px; }
+
+  .itemCount {
+    text-align: right; }
+
+  .pay a {
+    display: inline-block;
+    height: 30px;
+    border-radius: 3px;
+    color: #ffffff;
+    line-height: 30px;
+    padding: 0 15px;
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aaaaaa), color-stop(1, #888888)); }
+  .pay a:last-child {
+    float: right; } }

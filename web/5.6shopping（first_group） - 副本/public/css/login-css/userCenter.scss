@@ -1,0 +1,275 @@
+
+*{
+  margin:0;
+  padding:0;
+  font-size: 13px;
+//  border: 1px solid gray;
+}
+body{
+  background: #f3f3f3;
+}
+.priceTag{
+  color: #f30;
+  font-weight: 700;
+}
+.proName{
+  color:#666;
+}
+#wrapper{
+  margin-top: 130px;
+  position: relative;
+  min-height: 600px;
+  .subNav{
+    a{
+      text-decoration: none;
+      color:#333;
+      .badge{
+        background: #5284c2;
+      }
+    }
+    padding-right: 0;
+    background: #fff;
+    ul{
+      li{
+        line-height: 40px;
+        cursor: pointer;
+      }
+      li:hover{
+        border-right: 2px solid #f30;
+        background: #f3f3f3;
+      }
+    }
+  }
+
+//  #setPortraitDiv{
+//    display: none;
+//    height: 300px;
+//    width: 400px ;
+//    position: absolute;
+//    left: 30%;
+//    top:30%;
+//    background: #f3f3f3;
+//    border: 1px solid d4d4d4;
+//    z-index: 999;
+//  }
+  .address{
+    display: none;
+    background: #fff;
+    padding: 10px;
+    .addr{
+      position: relative;
+      border: 1px solid #cecece;
+      border-top: none;
+      margin: 2px;
+      table{
+        tr{
+          td{
+            cursor: pointer;
+          }
+        }
+      }
+      .label-addDefault{
+        display: none;
+        cursor: pointer;
+      }
+    }
+    .addAddrDiv{
+      border: none;
+    }
+    .editAddrDiv{
+      display: none;
+      position: absolute;
+//      left: 40%;
+      bottom: 0;
+      color: #e7e7e7;
+      button:hover{
+        background: rgb(255, 119, 0);
+      }
+      button{
+        background: rgb(0, 189, 0);
+      }
+    }
+    div:hover{
+      .editAddrDiv{
+      display: block;
+
+    }
+      .label-addDefault{
+        display: block;
+      }
+    }
+    .addAddrDiv{
+      .addrSelect{
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .basicInfo{
+    display: none;
+    background-color: #9dc29e;
+    table{
+      background-color: #fff;
+      height: 300px;
+      tr{
+        line-height: 40px;
+        td{
+          .enableEdit{
+            cursor: pointer;
+          }
+          .enableEdit:hover{
+          text-decoration: underline;
+
+        }
+          input{
+            line-height: 20px;
+          }
+        }
+      }
+      .cfModifyInfo{
+        margin-left: 10px;
+        width:100px;
+      }
+    }
+  }
+  .content{
+    margin-left: 1.5em;
+    .info-head{
+      position: relative;
+      background: #fff;
+      margin-bottom: 20px;
+      height: 18em;
+      border: 1px solid #d0d3d5;
+      border-top: 1px solid #dadddf;
+      .portrait{
+        padding: 0;
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border: 2px solid #d4d4d4;
+        border-radius: 50%;
+        margin: 10px 1em;
+      }
+      .portrait:hover{
+        cursor: pointer;
+        border: 2px solid #f30;
+      }
+      .info-head-nav{
+        border-bottom: 1px solid #e1e4e6;
+        padding: 10px 0;
+        height: 5em;
+        background: #f5f8fa;
+      }
+      .info-head-content{
+        margin: 0;
+      }
+      .balanceManage{
+        padding: 30px 0;
+        .balance{
+          font-size: 60px;
+          float: right;
+          margin-right: 50px;
+          p{
+            span{
+              font-size: 30px;
+              color: #648065;
+            }
+            font-size: 80px;
+            color: #648065;
+          }
+        }
+      }
+    }
+
+    .info-body{
+      .panel{
+        .panel-heading{
+          background: #a0cdeb;
+          color: #fff;
+          font-family: "Microsoft YaHei";
+          .panel-title{
+          }
+        }
+        .panel-body{
+          .product{
+            cursor: pointer;
+            border: 1px solid rgba(160, 205, 235, 0.47);
+            margin:5px 0;
+//            padding: 2px;
+            padding: 10px;
+              img{
+              width: 100%;
+            }
+            p{
+              margin-top: 10px;
+            }
+          }
+          .changepros{
+            cursor: pointer;
+            .label-default{
+            }
+          }
+        }
+      }
+    }
+   }
+
+  .sideContent{
+    margin-left: .2em;
+    .topicPanel{
+      font-family: "Microsoft YaHei";
+      width: 100%;
+      dt{
+        color:white;
+        font-size: 1.1em;
+        line-height: 30px;
+        text-align: center;
+      }
+      dd{
+        overflow: hidden;
+        cursor: pointer;
+        div{
+          float: left;
+          width: 48%;
+          margin: .1em .2em 0 .1em;
+          img{
+            width:100%;
+          }
+        }
+        div:hover{
+          border: 1px solid rgba(100, 149, 237, 0.75);
+        }
+      }
+    }
+    .hot{
+      border:1px solid #f35c2f;
+
+      dt{
+        background-color: #f35c2f;
+      }
+      dd{
+        border-bottom: 1px solid #e8e8e8;
+        div{
+          border: 1px solid rgba(243, 92, 47, 0.24);
+        }
+      }
+    }
+    .latest{
+      border:1px solid #6ec884;
+      dt{
+        background-color:#6ec884 ;
+
+      }
+      dd{
+        div{
+          border: 1px solid rgba(110, 200, 132, 0.24);
+        }
+      }
+    }
+
+  }
+
+  }
+
+
+

@@ -1,0 +1,120 @@
+@charset "GBK";
+* {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+/*字体*/
+/*head文字颜色*/
+/*对input-button全屏*/
+/*对input-button小屏*/
+.backToTop {
+  position: fixed;
+  bottom: 0%;
+  right: 2%; }
+  .backToTop .backToTop_img {
+    width: 55px;
+    height: 104px;
+    background: url("../../img/head_foot/top.png") no-repeat -45px -20px; }
+
+body > #header .head_logo {
+  margin-top: 10px; }
+  body > #header .head_logo a img {
+    width: 204px;
+    height: 50px; }
+body > #header .head_loginRegister {
+  margin-top: 20px; }
+  body > #header .head_loginRegister p {
+    font-size: 18px;
+    font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+    color: #ffffff; }
+  body > #header .head_loginRegister input {
+    font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+    background-color: #1e941e;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    width: 60px;
+    height: 25px; }
+body > #header .head_button input {
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+  background-color: #1e941e;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 60px;
+  height: 25px; }
+body > #header .head_nav {
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif; }
+  body > #header .head_nav ul li {
+    float: right; }
+    body > #header .head_nav ul li a {
+      color: #941191;
+      font-size: 18px;
+      text-decoration: none; }
+
+/*select*/
+.activeLi {
+  background: #999999;
+  width: 100%;
+  height: 100%; }
+
+body > #footer {
+  box-shadow: inset 0 5px 8px -3px #080808;
+  background-color: #222;
+  padding: 70px 0;
+  margin-top: 70px;
+  color: #626262;
+  border-top: 1px solid #7b7b7b; }
+  body > #footer h5 {
+    font-size: 14px;
+    font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+    font-weight: 700; }
+  body > #footer a {
+    color: #b42424; }
+  body > #footer a:hover {
+    color: #a22020; }
+
+@media screen and (max-width: 768px) {
+  body > #header .head_logo a img {
+    width: 100px;
+    height: 40px; }
+  body > #header .head_button {
+    position: relative;
+    left: 40px;
+    margin-top: 15px; }
+    body > #header .head_button input {
+      font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+      background-color: #1e941e;
+      color: #ffffff;
+      outline: none;
+      border: none;
+      border-radius: 2px;
+      font-size: 16px;
+      width: 50px;
+      height: 30px; }
+  body > #header .head_loginRegister input {
+    padding: 0;
+    margin: 0;
+    font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+    background-color: #1e941e;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    width: 50px;
+    height: 30px; }
+  body > #header .head_nav1 {
+    font-family: "rooney-web",Georgia,"Times New Roman",Times,serif; }
+    body > #header .head_nav1 ul li a {
+      color: 14px;
+      color: #941191;
+      font-size: 18px;
+      text-decoration: none; } }

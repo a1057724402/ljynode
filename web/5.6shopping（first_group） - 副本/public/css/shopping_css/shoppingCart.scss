@@ -1,0 +1,90 @@
+body{
+  background-color: #edf0f3;
+}
+
+.shoppingCartTable{
+  background-color: #ffffff;
+  font-size: 1em;
+  table{
+    text-align: center;
+    tr:first-child{
+      height: 28px;
+    }
+    .counts{
+      width: 50px;
+    }
+  }
+  .itemCount{
+    display: inline-block;
+  }
+  .hoverCurser:hover{
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .shoppingCartTable{
+    margin-top: 135px;
+    min-height: 200px;
+    table{
+      margin-top: 20px;
+      .col1{
+        width: 8.3333333%;
+      }
+      .tableHead{
+        font-weight: bold;
+      }
+      .tableItems{
+        border-bottom: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+      }
+      .tableItems:first-child{
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+  .noItem{
+    margin: 90px auto;
+    text-align: center;
+  }
+  .payment{
+    float: right;
+  }
+  .counter{
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shoppingCartTable {
+    min-height: 300px;
+    margin-top: 70px;
+    table {
+      margin-top: 10px;
+      td:first-child {
+        width: 70px;
+      }
+    }
+  }
+  .payment{
+    float: right;
+    display: inline-block;
+    height: 30px;
+    border-radius: 3px;
+    color: #ffffff;
+    line-height: 30px;
+    padding: 0 15px;
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #aaa), color-stop(1, #888));
+  }
+  .counter{
+    padding-top: 10px;
+  }
+  .itemCount{
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+

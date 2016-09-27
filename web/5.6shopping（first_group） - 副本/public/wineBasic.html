@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+        <!--加名字是用于控制器模板，老师的lesson6-->
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--手机中需要引入的-->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
+    <title></title>
+    <!--公共引入-->
+    <link rel="stylesheet" href="css/css_public/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.min.css"/>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+
+    <!--结束-->
+    <!--mySelf-->
+
+    <link rel="stylesheet" href="css/head_foot_css/head_foot.css"/>
+    <link rel="stylesheet" href="css/index_css/wineBasic.css"/>
+    <script src="js/login_js/getSession.js"></script>
+    <style>
+        /*响应布局*/
+        @media screen and (min-width:1000px),screen and (min-device-width:1000px){
+
+        }
+    </style>
+</head>
+<body>
+<a name="gohead"></a>
+<div style="height: 1px"></div>
+
+<!--back to top-->
+<div class="backToTop visible-md" onclick="backTop()">
+    <div class="backToTop_img"></div>
+</div>
+
+<div id="header" class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="row col-md-12 col-xs-12">
+            <div class="head_logo col-md-3 col-xs-3">
+                <a href="#"><img src="img/head_foot/logo.png" alt="logo"/></a>
+            </div>
+            <div class="head_loginRegister col-md-6 col-md-offset-3  visible-md">
+                <!--<input type="button" value="Login" />-->
+                <!--<input type="button" value="Register"/>-->
+                <p class="col-md-12">
+                    <strong class="col-md-3">Hi!&nbsp;hello:&nbsp;&nbsp;</strong>
+                    <span id="sessionSpan" class="col-md-3">请登录！</span>
+
+                    <input type="button" value="退出" onclick="outSession()" class="col-md-1"/>
+                    <small class="col-md-4" onclick="personalCenterOne()"><a href="#">[个人中心]</a></small>
+                </p>
+            </div>
+            <div class="head_button col-md-3 col-xs-7 col-xs-offset-2 visible-xs" >
+                <input type="button"  value="菜单" data-toggle="collapse" data-target=".nav-collapse">
+                <a href="login.html"><input type="button" value="登陆"/></a>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-md">
+            <div class="head_nav ">
+                <ul class="col-md-10 col-xs-4 nav pull-right nav-pills  ">
+                    <li ><a href="login.html">登陆/注册</a></li>
+                    <!--<li><a href="aboutUs.html">关于我们</a></li>-->
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            关于 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="wineBasic.html">信息&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="browse.html">浏览&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="aboutUs.html">关于我们&emsp;&emsp;</a></li>
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <li><a href="index.html">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-xs">
+            <div class="head_nav1 nav-collapse collapse">
+                <ul class=" col-xs-12 col-xs-offset-2 nav pull-left">
+                    <li><a href="index.html">首页</a></li>
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <!--<li><a href="login.html">登陆/注册</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <div id="wb_contentFrame">
+        <div class="container wb_contentFrameOut">
+            <div class="content_1">
+                <h1>葡萄酒韵事-引您窥视德林河葡萄酒那些事</h1>
+            </div>
+            <hr/>
+            <div class="row content_2">
+                <div class="col-md-4 text-center">
+                    <img src="img/wineBasic/01.png" alt="logo"/>
+                </div>
+                <div class="col-md-8">
+                    <div class="visible-md">
+                        <h2>
+                            葡萄酒入门
+                        </h2>
+                        <p >
+                            了解葡萄酒不仅帮助您提升葡萄酒品味，也有助于寻找到更好的葡萄酒。首先，让我们看看侍酒师如何侍酒的。侍酒服务不止是种礼仪，更能提升个人品味。
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            <a href="#">
+                                <p>
+                                    &nbsp;&nbsp;侍酒与选择葡萄酒杯的七个步骤
+                                </p>
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="visible-md">
+                        <p>
+                            您喜欢上面入门指导吗？下面这些文章将提供更多如何像资深人一样欣赏葡萄酒。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row content_3">
+                <h4 class="col-md-12">欣赏葡萄酒</h4>
+                <div class="col-md-4 col-md-offset-1">
+                    <ul>
+                        <li><a href="#">如何打开葡萄酒瓶</a></li>
+                        <li><a href="#">如何保证倒酒时一滴不洒</a></li>
+                        <li><a href="#">如何安全的开启香槟</a></li>
+                        <li><a href="#">为什么葡萄酒温度极其重要</a></li>
+                        <li><a href="#">如何储存开启后的葡萄酒</a></li>
+                        <li><a href="#">关于葡萄酒瓶尺寸</a></li>
+                        <li><a href="#">如何选择适合自己的葡萄酒杯</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 visible-md">
+                    <ul>
+                        <li><a href="#">一瓶葡萄酒能盛多少杯</a></li>
+                        <li><a href="#">如何醒酒</a></li>
+                        <li><a href="#">廉价葡萄酒品出更好口感的窍门</a></li>
+                        <li><a href="#">如何优雅地开启香槟</a></li>
+                        <li><a href="#">碰杯的技巧</a></li>
+                        <li><a href="#">如何专业地清洁葡萄酒杯</a></li>
+                        <li><a href="#">如何除掉葡萄酒沉淀</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="img/wineBasic/02.png" alt="logo"/>
+                </div>
+            </div>
+            <hr/>
+            <div class="row content_4">
+                <h2 class="col-md-12">探索葡萄酒品类</h2>
+                <div class="col-md-4 text-center">
+                    <img src="img/wineBasic/03.jpg" alt="logo"/>
+                </div>
+                <div class="col-md-8">
+                    <div style="margin-top: 40px"></div>
+                    <div class="visible-md">
+                        <p>
+                            迄今，有超过1300种葡萄酒遍及在世界角落。
+                            所以，了解它们大致类别比起记住所有的品种更切合实际。
+                            根据葡萄酒品味特征，可以分为9种大致类别：
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <strong>9种品类:</strong>
+                            Light White, Rich White, Aromatic & Sweet White,
+                            Rosé, Light Red, Medium Red, Full-Bodied Red, Sparkling and Dessert Wine.
+                        </p>
+                    </div>
+                    <div>
+                        <h3>
+                            <a href="#">9种品类葡萄酒</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row content_5">
+                <h2 class="col-md-12">不同种类葡萄酒</h2>
+                <div class="col-md-4 text-center">
+                    <img src="img/wineBasic/04.jpg" alt="logo"/>
+                </div>
+                <div class="col-md-8">
+                    <div style="margin-top: 20px"></div>
+                    <div class="visible-md">
+                        <p>
+                            After understanding the spectrum of flavors that wine has to offer, you can explore new wines by their flavor. If you want to get a baseline of the major wine
+                            varieties in the world, challenge yourself to try the
+                            ‘noble grapes’ 18 listed below.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="col-md-offset-1">
+                            <a href="#">不同种类葡萄酒</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <li><a href="#">入门这葡萄酒最佳选择</a></li>
+                        <li><a href="#">Taste All 18 ‘Noble’ Grapes</a></li>
+                        <li><a href="#">阅读关于所有品种葡萄酒</a></li>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row content_6">
+                <h2 class="col-md-12">培养您的葡萄酒品味</h2>
+                <div class="col-md-4 text-center">
+                    <img src="img/wineBasic/05.jpg" alt="logo"/>
+                </div>
+                <div class="col-md-8">
+                    <div style="margin-top: 20px"></div>
+                    <div class="visible-md">
+                        <p>
+                            Learning to taste wine will help you pick out flavors and also notice wine faults. Tasting is a 4 step process and will become
+                            second nature once you learn it. You will find yourself actively tasting everything!
+                            学会欣赏葡萄酒有助于挑选适合口味，并且避免错误。这个过程主要分四个步骤，相信您学会后您会发现原来这一切是如此自然。你会亟待尝试各种红酒。
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="col-md-offset-1">
+                            <a href="#">如何品葡萄酒&雕刻您的味觉</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <li><a href="#">关于问题葡萄酒及如何通过嗅觉辨识出它们</a></li>
+                        <li><a href="#">口感与风味的区别</a></li>
+                        <li><a href="#">你是资深品酒人吗&你也不清楚？</a></li>
+                        <li><a href="#">如何品出红酒中水果风味</a></li>
+                        <li><a href="#">如何编写有用的红酒评价</a></li>
+                        <li><a href="#">9步让您成为葡萄酒专家</a></li>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <div class="row content_7">
+                <h2 class="col-md-12">品&购 葡萄酒</h2>
+                <div class="col-md-5">
+                    <div style="margin-top: 20px"></div>
+                    <div>
+                        <h3 class="col-md-offset-1">
+                            <a href="#">葡萄酒 & 食物 搭配</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <li><a href="#">基础款红酒与食物搭配表</a></li>
+                        <li><a href="#">高级葡萄酒与食物搭配表</a></li>
+                        <li><a href="#">红酒与鸡腿和肉类</a></li>
+                        <li><a href="#">红酒与鱼搭配</a></li>
+                        <li><a href="#">红酒与羊肉 & 不同种类牛肉搭配</a></li>
+                        <li><a href="#">红酒与披萨</a></li>
+                        <li><a href="#">红酒与烧烤</a></li>
+                        <li><a href="#">红酒食物搭配禁忌</a></li>
+                        <li><a href="#">6个红酒食物完美搭配方案</a></li>
+                        <!--<li><a href="#">Syrah Food Pairing Guide</a></li>-->
+                    </div>
+                    <div>
+                        <h3 class="col-md-offset-1">
+                            <a href="#">购买葡萄酒</a>
+                        </h3>
+                    </div>
+
+                    <div>
+                        <li><a href="#">买到假冒伪劣葡萄酒</a></li>
+                        <li><a href="#">小方法买到便宜的红酒</a></li>
+                        <!--<li><a href="#">Up and Coming Value Regions and Lessor Known Varieties</a></li>-->
+                        <li><a href="#">低于$20美元的葡萄酒</a></li>
+                        <li><a href="#">120条葡萄酒说明 & 它们真正的意思</a></li>
+                        <li><a href="#">购买葡萄酒用于婚礼或者大型活动</a></li>
+                        <li><a href="#">怎样在餐厅点一瓶红酒</a></li>
+                        <li><a href="#">Why Vintage Matters</a></li>
+                        <li><a href="#">现在的葡萄酒与古老的葡萄酒</a></li>
+
+                    </div>
+
+                </div>
+                <div class="col-md-5 text-center col-md-offset-2">
+                    <img src="img/wineBasic/05.jpg" alt="logo"/>
+                </div>
+            </div>
+            <div class="content_8">
+                <div class=" content_8_1">
+                    <i class="glyphicon-bookmark"></i>
+                    <strong>
+                       怎么变成一名葡萄酒专家
+                    </strong>
+                    <p>想去做葡萄酒业务吗?这儿有一些文章将帮助你成功.</p>
+                    <a href="#">
+                        怎么成为一名酒恃
+                    </a>
+                    <br/>
+                    <a href="#">
+                        一站式向导帮助你学习葡萄酒文化课程
+
+                    </a>
+                    <br/>
+                    <a href="#">
+                        帮助你拿到酒恃考试通过证书的小窍门
+
+                    </a>
+                    <br/>
+                    <a href="#">
+                        精选关于葡萄酒书籍
+                    </a>
+
+                </div>
+                <hr/>
+
+            </div>
+            <div class=" content_9">
+                <h3>为什么要学习葡萄酒?</h3>
+                <p>
+                    <br/>
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>提高社会体验</h5>
+                        <p>红酒是与其它公司交流最好的饮品.
+                            在一条漫长的路上，一点葡萄酒的知识将打开新的品味和品格.
+                            探索葡萄酒是一条不知疲倦的冒险，你需要发动你的朋友和家庭.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>买葡萄酒的秘密</h5>
+                        <p>没有一个人喜欢买酒时上当受骗.
+                            你买葡萄酒时，是随意性，胡乱的品尝两口，还是看它的标签？
+                            你怎么样才能够步行其中，自信的找到你喜爱的红酒，不少于100%的满意度？
+                              </p>
+                    </div>
+                </div>
+                <p>
+                    <br/>
+                </p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5>提高品酒和闻酒的能力</h5>
+                        <p>品酒和闻酒必须要经过练习. 当你正在喝酒时，你的意识应该有短暂的暂停去练习提高.
+                            能力的积累能让你更容易的找到相似的酒.
+                            葡萄酒超越认识的极限,
+                            就像任何事一样，学习基础的知识能让你提高品酒和闻酒的能力.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>私人的订制/满意度</h5>
+                        <p>世界上有很多葡萄酒.我们需要有一个机会去超越干扰.
+                            你有喜欢的团队嘛, 时尚设计师, 电视上面的大厨, 或者影视导演
+                            如果我告诉你这里有许多著名的酿酒师，而且你还可能看见你喜欢的酒师/酿酒师，你还会再次去喝糟糕的葡萄酒嘛</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content_10">
+                <div class="content_10_1 col-md-12">
+                    <h2>
+                        &nbsp;&nbsp;
+                        喜爱葡萄酒吗? 坚持对它的认识
+                    </h2>
+                    <p>加入成千葡萄酒狂热爱好人群 ，订购 Folly的 <strong>每周葡萄酒实时公布</strong>.
+                        不要错过每个小窍门，因为它们会让你喝到更好的葡萄酒.</p>
+
+                    <form action="#" class="form-inline">
+                        <input type="text" name="email" class="form-control" placeholder="Email" style="width: 60%"/>
+                        <button type="button" class="btn btn-danger"/>订购</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <img src="img/head_foot/footLogn.png" alt="logo"/>
+                <p>从2011年开始我们创建了网络艺术管理，主要包括我们生产的葡萄酒视频
+                    , 条款列表, 和有教育性的课程.
+                </p>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>企业</h5>
+                <ul>
+                    <li><a href="aboutUs.html">关于葡萄酒</a></li>
+                    <!--<li><a href="#">Follya</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <li><a href="aboutUs.html">我们的服务</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>商业 & 媒体</h5>
+                <ul>
+                    <li><a href="#">登陆我们的网站</a></li>
+                    <!--<li><a href="#">Wine</a></li>-->
+                    <li><a href="#">内容许可</a></li>
+                    <!--<li><a href="#">Lucensing</a></li>-->
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>网站规则</h5>
+                <ul>
+                    <li><a href="#">法律法规</a></li>
+                    <!--<li><a href="#">Ethics</a></li>-->
+                    <li><a href="#">版权所有</a></li>
+                    <li><a href="#">使用条款</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <a href="#gohead" >返回页面顶部</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="sub-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

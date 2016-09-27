@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--手机中需要引入的-->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title></title>
+    <!--公共引入-->
+    <link rel="stylesheet" href="css/goodsList/goodsLIst.css"/>
+    <!--IE兼容-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/head_foot_css/head_foot.css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.min.css"/>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/login_js/getSession.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--结束-->
+    <style>
+        /*响应布局*/
+        @media screen and (min-width:1000px),screen and (min-device-width:1000px){
+
+        }
+    </style>
+</head>
+<body>
+<a name="gohead"></a>
+<div style="height: 1px"></div>
+
+<!--back to top-->
+<div class="backToTop visible-md" onclick="backTop()">
+    <div class="backToTop_img"></div>
+</div>
+
+<div id="header" class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="row col-md-12 col-xs-12">
+            <div class="head_logo col-md-3 col-xs-3 visible-md">
+                <a href="#"><img src="img/head_foot/logo.png" alt="logo"/></a>
+            </div>
+            <div class="head_loginRegister col-md-6 col-md-offset-3  ">
+                <!--<input type="button" value="Login" />-->
+                <!--<input type="button" value="Register"/>-->
+                <p class="col-md-12">
+                    <strong class="col-md-3 visible-md">Hi!&nbsp;hello:&nbsp;&nbsp;</strong>
+                    <span id="sessionSpan" class="col-md-3 ">请登录！</span>
+
+                    <input type="button" value="退出" onclick="outSession()" class="col-md-1  "/>
+
+                    <small class="col-md-4 visible-md" onclick="personalCenterOne()"><a href="#">[个人中心]</a></small>
+                </p>
+            </div>
+            <div class="head_button col-md-3 col-xs-7 col-xs-offset-2 visible-xs" >
+                <input type="button"  value="菜单" data-toggle="collapse" data-target=".nav-collapse">
+                <a href="login.html"><input type="button" value="登陆"/></a>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-md">
+            <div class="head_nav ">
+                <ul class="col-md-10 col-xs-4 nav pull-right nav-pills  ">
+                    <li ><a href="login.html">登陆/注册</a></li>
+                    <!--<li><a href="aboutUs.html">关于我们</a></li>-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            关于 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="wineBasic.html">信息&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="browse.html">浏览&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="aboutUs.html">关于我们&emsp;&emsp;</a></li>
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <li><a href="index.html">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-xs">
+            <div class="head_nav1 nav-collapse collapse">
+                <ul class=" col-xs-12 col-xs-offset-2 nav pull-left">
+                    <li><a href="index.html">首页</a></li>
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <!--<li><a href="login.html">登陆/注册</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!--中部开始-->
+    <div class="container">
+        <span class="col-md-12 visible-md margin-top">&nbsp</span>
+    </div>
+<div class="container" style="background: #ffffff" >
+    <span class="visible-md margin-top1" >&nbsp</span>
+    <span class="visible-xs margin-top2"></span>
+    <div class="row">
+        <div class="col-md-7 col-xs-12">
+            <div class="col-md-12 visible-md">
+                    <span class="zoom" id="image1" style="position: relative; overflow: hidden;">
+                        <img  src="" class="wine_img1"  id="img1" width="530" height="470" style="border: 2px solid #666666;" alt="Daisy on the Ohoopee">
+                        <img  class="wine_img1 zoomImg" style="position: absolute; top: -440.46938775510205px; left: -91.82558139534883px; opacity: 0; width: 1920px; height: 1200px; border: none; max-width: none;">
+                    </span>
+            </div>
+            <img  class="wine_img2 col-md-3 col-xs-12 margin-top2" onclick="changeImg(event)" alt=""/>
+            <img  class="wine_img3 col-md-3 col-xs-12 margin-top2" onclick="changeImg(event)" alt=""/>
+            <img  class="wine_img4 col-md-3 col-xs-12 margin-top2" onclick="changeImg(event)" alt=""/>
+        </div>
+        <div class="col-md-5 col-xs-12">
+            <span id="wine_name" class="col-md-12 col-xs-12 border-bottom font_title1"></span>
+                <span class="col-md-6 col-xs-6 price">
+                    $<span id="price"></span>
+                </span>
+            <div class="col-md-6 col-xs-6">
+                <button class="btn btn-block addBut" id="addGoods" onclick="addGoods()">添加到购物车</button>
+                <a class="btn btn-block addBut" href="shoppingCart.html" id="goodsCart">查看购物车</a>
+            </div>
+            <ul class="col-md-12 col-xs-12 nav nav-tabs ">
+                <li class="active a_color"><a href="#">商品描述</a></li>
+                <!--<li><a href="#" class="a_color">Specs</a></li>-->
+            </ul>
+            <span class="col-md-12 col-xs-12 font_title2 text-center">关于红酒的信息</span>
+                <span id="mainInfo" class="col-md-12 col-xs-12 font_style1">
+
+                </span>
+                <span class="col-md-12 col-xs-12 border-bottom font_title2">
+                    本店特色:
+                </span>
+            <span class="font_style3 col-md-12 visible-md">1.酒品质量检查认证</span>
+            <span class="font_style3 col-md-12 visible-md">2.假一赔十售后保证</span>
+            <span class="font_style3 col-md-12 visible-md">3.免邮费7日内送达</span>
+            <span class="font_style3 col-md-12 visible-md">4.送精美酒杯一个</span>
+            <div class="border-bottom col-md-12 col-xs-12">
+                有任何咨询或疑问请发至Email: <a href="" class="a_color">info@winefolly.com</a>
+            </div>
+            <div class="col-md-6 col-md-push-6 col-xs-6 col-xs-push-6">
+                <a href="goodsInfo.html" class="btn btn-block a_but">继续选购</a>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-top2">
+        <div class="col-md-12 col-md-push-2 col-xs-12 font_title2">
+            评&nbsp&nbsp&nbsp&nbsp价
+        </div>
+    </div>
+    <div id="discuss" class="row">
+        <div class="col-md-8 col-md-push-2 col-xs-12 border background1 notDiscuss" id="noDiscuss">
+            <div class="col-md-12 col-xs-12 text-center font_style4">
+                暂未评价
+            </div>
+        </div>
+        <div class="col-md-8 col-md-push-2 col-xs-12 border background1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="text-center visible-md margin-top3">
+            <button class="btn bg-info" id="beforePage" onclick="beforePage()">上一页</button>
+            <div class="page" id="pc_page">
+            </div>
+            <button class="btn bg-info" id="nextPage" onclick="nextPage()">下一页</button>
+        </div>
+        <div class="visible-xs text-center margin-top3">
+            <button class="btn bg-info" id="phone_beforePage" onclick="phone_beforePage()">上一页</button>
+            <select name="" id="phone_page" onchange="phone_page()">
+                <!--<option>1</option>-->
+                <!--<option>2</option>-->
+                <!--<option>3</option>-->
+                <!--<option>4</option>-->
+            </select>
+            <button class="btn bg-info" id="phone_nextPage" onclick="phone_nextPage()">下一页</button>
+        </div>
+    </div>
+    <div class="row margin-top3">
+        <div class="col-md-8 col-md-push-4 col-xs-8 col-xs-push-2 stars" id="stars">
+            <ul>
+                <li>★</li>
+                <li>★</li>
+                <li>★</li>
+                <li>★</li>
+                <li>★</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-md-push-3 col-xs-12">
+            <textarea id="discussMessage" rows="5" class="col-md-12 col-xs-10" style="margin-left: 26px;"></textarea><br>
+            <span class="col-md-2 col-md-push-10 col-xs-4 col-xs-push-7 margin-top3 btn a_but" onclick="addDiscuss()">添加评论</span>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <img src="img/head_foot/footLogn.png" alt="logo"/>
+                <p>从2011年开始我们创建了网络艺术管理，主要包括我们生产的葡萄酒视频
+                    , 条款列表, 和有教育性的课程.
+                </p>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>企业</h5>
+                <ul>
+                    <li><a href="aboutUs.html">关于葡萄酒</a></li>
+                    <!--<li><a href="#">Follya</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <li><a href="aboutUs.html">我们的服务</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>商业 & 媒体</h5>
+                <ul>
+                    <li><a href="#">登陆我们的网站</a></li>
+                    <!--<li><a href="#">Wine</a></li>-->
+                    <li><a href="#">内容许可</a></li>
+                    <!--<li><a href="#">Lucensing</a></li>-->
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>网站规则</h5>
+                <ul>
+                    <li><a href="#">法律法规</a></li>
+                    <!--<li><a href="#">Ethics</a></li>-->
+                    <li><a href="#">版权所有</a></li>
+                    <li><a href="#">使用条款</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <a href="#gohead" >返回页面顶部</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="sub-footer">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+    <script src="js/goodsList/goodsList.js"></script>
+    <script src="js/goodsList/jquery.zoombie.js"></script>
+    <script src="js/jquery.query.js"></script>
+</body>
+</html>

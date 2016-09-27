@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--手机中需要引入的-->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <title></title>
+    <!--公共引入-->
+    <link rel="stylesheet" href="css/browse/browse.css"/>
+    <!--IE兼容-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/head_foot_css/head_foot.css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.min.css"/>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+
+
+    <![endif]-->
+    <!--结束-->
+    <style>
+        /*响应布局*/
+        @media screen and (min-width:1000px),screen and (min-device-width:1000px){
+
+        }
+    </style>
+</head>
+<body>
+<a name="gohead"></a>
+<div style="height: 1px"></div>
+
+<!--back to top-->
+<div class="backToTop visible-md" onclick="backTop()">
+    <div class="backToTop_img"></div>
+</div>
+
+<div id="header" class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="row col-md-12 col-xs-12">
+            <div class="head_logo col-md-3 col-xs-3">
+                <a href="#"><img src="img/head_foot/logo.png" alt="logo"/></a>
+            </div>
+            <div class="head_loginRegister col-md-6 col-md-offset-3  visible-md">
+                <!--<input type="button" value="Login" />-->
+                <!--<input type="button" value="Register"/>-->
+                <p class="col-md-12">
+                    <strong class="col-md-3">Hi!&nbsp;hello:&nbsp;&nbsp;</strong>
+                    <span id="sessionSpan" class="col-md-3">请登录！</span>
+
+                    <input type="button" value="退出" onclick="outSession()" class="col-md-1"/>
+                    <small class="col-md-4" onclick="personalCenterOne()"><a href="#">[个人中心]</a></small>
+                </p>
+            </div>
+            <div class="head_button col-md-3 col-xs-7 col-xs-offset-2 visible-xs" >
+                <input type="button"  value="菜单" data-toggle="collapse" data-target=".nav-collapse">
+                <a href="login.html"><input type="button" value="登陆"/></a>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-md">
+            <div class="head_nav ">
+                <ul class="col-md-10 col-xs-4 nav pull-right nav-pills  ">
+                    <li ><a href="login.html">登陆/注册</a></li>
+                    <!--<li><a href="aboutUs.html">关于我们</a></li>-->
+                    <li class="dropdown active">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            关于 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="wineBasic.html">信息&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="browse.html">浏览&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="aboutUs.html">关于我们&emsp;&emsp;</a></li>
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <li><a href="index.html">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-xs">
+            <div class="head_nav1 nav-collapse collapse">
+                <ul class=" col-xs-12 col-xs-offset-2 nav pull-left">
+                    <li><a href="index.html">首页</a></li>
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <!--<li><a href="login.html">登陆/注册</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <!--中部开始-->
+    <div class="container">
+        <span class="col-md-12 visible-md margin_top1" >&nbsp</span>
+        <span class="col-xs-12 visible-xs margin_top2">&nbsp</span>
+        <!--左侧-->
+        <div class="col-md-8 col-xs-12 left_style">
+            <div class="col-md-12 col-xs-12 font_title1">最新酒品浏览</div>
+            <div class="col-md-12 col-xs-12 border_bottom">&nbsp</div>
+            <div class="col-md-12 col-xs-12">
+                <div class="font_title2 text-center">
+                    本站推荐TOP1
+                </div>
+            </div>
+            <div class="col-md-12 col-md-push-6 col-xs-12 col-xs-push-5">
+                <div class="font_title3"><span class="span_color1">——法国红酒</span> 4月新品</div>
+            </div>
+            <!--左侧左部分-->
+            <img src="img/browse/list-of-white-wines1-770x577.jpg" class="col-md-7  col-xs-12" alt=""/>
+            <!--左侧右部分-->
+            <div class="col-md-5  col-xs-12 font_text1" >
+                一种让你不得不买的白色的酒，当你一眼看见它会认为它本身就应该是白色的。
+            </div>
+            <a href="" class=" col-md-5 col-md-push-3 col-xs-12 col-xs-push-7 a_color2 font_text2">更多信息...</a>
+            <div class="col-md-12 col-xs-12 border_bottom">&nbsp</div>
+
+            <div class="col-md-12 col-xs-12">
+                <div class="font_title2 text-center">
+                    本站推荐TOP2
+                </div>
+            </div>
+            <div class="col-md-12 col-md-push-6 col-xs-12 col-xs-push-5">
+                <div class="font_title3"><span class="span_color1">——法国红酒</span> 4月新品</div>
+            </div>
+            <!--左侧左部分-->
+            <img src="img/browse/carbs-in-wine-770x577.jpg" class="col-md-7 col-xs-12" alt=""/>
+            <!--左侧右部分-->
+            <div class="col-md-5 col-xs-12 font_text1" >
+                Wine is low-carb by nature but that doesn’t mean you’re off the hook! We asked Dr. Edward Miller about carbs in wine and everything you should keep in mind.
+            </div>
+            <a href="" class=" col-md-5 col-md-push-3 col-xs-12 col-xs-push-7 a_color2 font_text2">更多信息...</a>
+            <div class="col-md-12 col-xs-12 border_bottom">&nbsp</div>
+
+            <div class="col-md-12 col-xs-12">
+                <div class="font_title2 text-center">
+                    本站推荐TOP3
+                </div>
+            </div>
+            <div class="col-md-12 col-md-push-6 col-xs-12 col-xs-push-5">
+                <div class="font_title3"><span class="span_color1">——法国红酒</span> 4月新品</div>
+            </div>
+            <!--左侧左部分-->
+            <img src="img/browse/wine-bottle-decoder-770x577.jpg" class="col-md-7 col-xs-12" alt=""/>
+            <!--左侧右部分-->
+            <div class="col-md-5 col-xs-12 font_text1" >
+                You can learn a lot about what type of wine you’re buying based on the style of bottle. Take a look at the major types of wine bottles and what wines tend to be inside.
+            </div>
+            <a href="" class=" col-md-5 col-md-push-3 col-xs-12 col-xs-push-7 a_color2 font_text2">更多信息...</a>
+            <div class="col-md-12 col-xs-12 border_bottom">&nbsp</div>
+
+            <div class="col-md-12 col-xs-12">
+                <div class="font_title2 text-center">
+                    本站推荐No4
+                </div>
+            </div>
+            <div class="col-md-12 col-md-push-6 col-xs-12 col-xs-push-5">
+                <div class="font_title3"><span class="span_color1">——法国红酒</span> 4月新品</div>
+            </div>
+            <!--左侧左部分-->
+            <img src="img/browse/Wine-Blends-Excerpt-770x577.jpg" class="col-md-7 col-xs-12" alt=""/>
+            <!--左侧右部分-->
+            <div class="col-md-5 col-xs-12 font_text1" >
+                If you made a wine blend, what would it be? See the most popular white and red wine blends around the world.
+            </div>
+            <a href="" class=" col-md-5 col-md-push-3 col-xs-12 col-xs-push-7 a_color2 font_text2">更多信息...</a>
+            <div class="col-md-12 col-xs-12 border_bottom">&nbsp</div>
+
+            <div class="col-md-12 col-xs-12">
+                <div class="font_title2 text-center">
+                   本站推荐No5
+                </div>
+            </div>
+            <div class="col-md-12 col-md-push-6 col-xs-12 col-xs-push-5">
+                <div class="font_title3"><span class="span_color1">——法国红酒</span> 4月新品</div>
+            </div>
+            <!--左侧左部分-->
+            <img src="img/browse/the-missoula-floods-770x577.jpg" class="col-md-7 col-xs-12" alt=""/>
+            <!--左侧右部分-->
+            <div class="col-md-5 col-xs-12 font_text1" >
+                Make the a visual connection to how massive floods created Washington’s unique wine terroir. Get simple answers to how soil and terrain makes wines taste the way they do.
+            </div>
+            <a href="" class=" col-md-5 col-md-push-3 col-xs-12 col-xs-push-7 a_color2 font_text2">更多信息...</a>
+            <div class="col-md-12 border_bottom">&nbsp</div>
+
+            <div class="col-md-12 col-xs-12">
+                <div class="font_title2 text-center">
+                    本站推荐TOP6
+                </div>
+            </div>
+            <div class="col-md-12 col-md-push-6 col-xs-12 col-xs-push-5">
+                <div class="font_title3"><span class="span_color1">——法国红酒</span> 4月新品</div>
+            </div>
+            <!--左侧左部分-->
+            <img src="img/browse/food-and-wine-excerpt-770x577.jpg" class="col-md-7 col-xs-12" alt=""/>
+            <!--左侧右部分-->
+            <div class="col-md-5 col-xs-12 font_text1" >
+                See the theory of food and wine pairing in action with this easy to use chart. Then, understand the simple science behind food and wine pairing based on our basic sense of taste.
+            </div>
+            <a href="" class=" col-md-5 col-md-push-3 col-xs-12 col-xs-push-7 a_color2 font_text2">更多信息...</a>
+            <div class="col-md-12 col-xs-12 border_bottom">&nbsp</div>
+
+            <div class="col-md-12 col-xs-12">
+                <div class="font_title2 text-center">
+                    本站推荐TOP7
+                </div>
+            </div>
+            <div class="col-md-12 col-md-push-6 col-xs-12 col-xs-push-5">
+                <div class="font_title3"><span class="span_color1">——法国红酒</span> 4月新品</div>
+            </div>
+            <!--左侧左部分-->
+            <img src="img/browse/flavors-in-wine-red-wine-770x630.png" class="col-md-7 col-xs-12" alt=""/>
+            <!--左侧右部分-->
+            <div class="col-md-5 col-xs-12 font_text1" >
+                Let’s break down flavors in wine and classify some familiar wine varieties so you can explore wine through flavor.
+            </div>
+            <a href="" class=" col-md-5 col-md-push-3 col-xs-12 col-xs-push-7 a_color2 font_text2">更多信息...</a>
+            <div class="col-md-12 col-xs-12 border_bottom">&nbsp</div>
+
+            <div class="col-md-12 col-xs-12">
+                <div class="font_title2 text-center">
+                    本站推荐No8
+                </div>
+            </div>
+            <div class="col-md-12 col-md-push-6 col-xs-12 col-xs-push-5">
+                <div class="font_title3"><span class="span_color1">——法国红酒</span> 4月新品</div>
+            </div>
+            <!--左侧左部分-->
+            <img src="img/browse/top-wine-varieties-by-wine-folly-770x577.jpg" class="col-md-7 col-xs-12" alt=""/>
+            <!--左侧右部分-->
+            <div class="col-md-5 col-xs-12 font_text1" >
+                Name the 2 top wine varieties you can think of right now, off the tip of your brain. What are they? If you guessed Cabernet Sauvignon and Mer…
+            </div>
+            <a href="" class=" col-md-5 col-md-push-3 col-xs-12 col-xs-push-7 a_color2 font_text2">更多信息...</a>
+            <div class="col-md-12 col-xs-12 border_bottom">&nbsp</div>
+        </div>
+        <!--右侧-->
+        <div class="col-md-4 visible-md">
+            <div class="col-md-12" >
+                <img class="img-thumbnail" src="img/browse/300x250wine-gift-guide.jpg" alt=""/>
+            </div>
+            <div class="col-md-12 back_style1 margin_top2 margin_left1">
+                <span class="col-md-12 font_title4">
+                    喜欢它还需要理由吗？
+                </span>
+                <div class="col-md-12 border_bottom"></div>
+                <span class="col-md-12 font_title4">联系我们：</span>
+                <span class="col-md-12">
+                    <ul class="ul">
+                        <li><a href="">关注我们的微博</a></li>
+                        <li><a href="">在脸谱网关注我们</a></li>
+                        <li><a href="">在谷歌上搜索我们</a></li>
+                        <li><a href="">获得我们的RSS</a></li>
+                        <li><a href="">葡萄酒俱乐部</a></li>
+                    </ul>
+                </span>
+                <div class="col-md-12 border_bottom"></div>
+                <span class="col-md-12 font_title4">
+                    谷歌上的介绍
+                </span>
+            </div>
+            <div class="col-md-12" >
+                <img class="img-thumbnail margin_top2" src="img/browse/300x600holiday-gift-guide.jpg" alt=""/>
+            </div>
+            <div class="col-md-12 back_style1 margin_top2 margin_left1">
+                <span class="col-md-12 font_title4">
+                     选购日
+                </span>
+                <span class="col-md-12 font_text1">
+                   每周选购一次葡萄酒是数以计千的葡萄酒爱好者最愉悦的事。
+                </span>
+                <div class="input-group margin_bottom">
+                    <input type="email" class="form-control" placeholder="email">
+                    <span class="input-group-addon btn but_color">加入选购</span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <img class="img-thumbnail margin_top2" src="img/browse/basic-wine-guide-101.jpg" alt=""/>
+            </div>
+            <div class="col-md-12 text-center">
+                <a href="" class="a_color2">葡萄酒基本指南</a>
+            </div>
+            <div class="col-md-12">
+                <img class="img-thumbnail margin_top2" src="img/browse/how-to-taste-wine.png" alt=""/>
+            </div>
+            <div class="col-md-12 text-center">
+                <a href="" class="a_color2">与众不同的品尝葡萄酒方式</a>
+            </div>
+        </div>
+    </div>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <img src="img/head_foot/footLogn.png" alt="logo"/>
+                <p>从2011年开始我们创建了网络艺术管理，主要包括我们生产的葡萄酒视频
+                    , 条款列表, 和有教育性的课程.
+                </p>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>企业</h5>
+                <ul>
+                    <li><a href="aboutUs.html">关于葡萄酒</a></li>
+                    <!--<li><a href="#">Follya</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <li><a href="aboutUs.html">我们的服务</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>商业 & 媒体</h5>
+                <ul>
+                    <li><a href="#">登陆我们的网站</a></li>
+                    <!--<li><a href="#">Wine</a></li>-->
+                    <li><a href="#">内容许可</a></li>
+                    <!--<li><a href="#">Lucensing</a></li>-->
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>网站规则</h5>
+                <ul>
+                    <li><a href="#">法律法规</a></li>
+                    <!--<li><a href="#">Ethics</a></li>-->
+                    <li><a href="#">版权所有</a></li>
+                    <li><a href="#">使用条款</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <a href="#gohead" >返回页面顶部</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="sub-footer">
+        <div class="container">
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+<script src="js/login_js/getSession.js"></script>
+</body>
+</html>

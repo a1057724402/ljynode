@@ -1,0 +1,376 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\node.exe',
+1 verbose cli   'D:\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'gulp_jshint',
+1 verbose cli   'gulp-concat',
+1 verbose cli   'gulp-uglify',
+1 verbose cli   'gulp-rename',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose install initial load of D:\Git\ljypro\web\package.json
+5 verbose readDependencies loading dependencies from D:\Git\ljypro\web\package.json
+6 silly cache add args [ 'gulp_jshint', null ]
+7 verbose cache add spec gulp_jshint
+8 silly cache add args [ 'gulp-concat', null ]
+9 verbose cache add spec gulp-concat
+10 silly cache add args [ 'gulp-uglify', null ]
+11 verbose cache add spec gulp-uglify
+12 silly cache add args [ 'gulp-rename', null ]
+13 verbose cache add spec gulp-rename
+14 silly cache add parsed spec Result {
+14 silly cache add   raw: 'gulp_jshint',
+14 silly cache add   scope: null,
+14 silly cache add   name: 'gulp_jshint',
+14 silly cache add   rawSpec: '',
+14 silly cache add   spec: 'latest',
+14 silly cache add   type: 'tag' }
+15 silly addNamed gulp_jshint@latest
+16 verbose addNamed "latest" is being treated as a dist-tag for gulp_jshint
+17 info addNameTag [ 'gulp_jshint', 'latest' ]
+18 silly mapToRegistry name gulp_jshint
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry data Result {
+21 silly mapToRegistry   raw: 'gulp_jshint',
+21 silly mapToRegistry   scope: null,
+21 silly mapToRegistry   name: 'gulp_jshint',
+21 silly mapToRegistry   rawSpec: '',
+21 silly mapToRegistry   spec: 'latest',
+21 silly mapToRegistry   type: 'tag' }
+22 silly mapToRegistry uri https://registry.npmjs.org/gulp_jshint
+23 verbose addNameTag registry:https://registry.npmjs.org/gulp_jshint not in flight; fetching
+24 silly cache add parsed spec Result {
+24 silly cache add   raw: 'gulp-concat',
+24 silly cache add   scope: null,
+24 silly cache add   name: 'gulp-concat',
+24 silly cache add   rawSpec: '',
+24 silly cache add   spec: 'latest',
+24 silly cache add   type: 'tag' }
+25 silly addNamed gulp-concat@latest
+26 verbose addNamed "latest" is being treated as a dist-tag for gulp-concat
+27 info addNameTag [ 'gulp-concat', 'latest' ]
+28 silly mapToRegistry name gulp-concat
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry data Result {
+31 silly mapToRegistry   raw: 'gulp-concat',
+31 silly mapToRegistry   scope: null,
+31 silly mapToRegistry   name: 'gulp-concat',
+31 silly mapToRegistry   rawSpec: '',
+31 silly mapToRegistry   spec: 'latest',
+31 silly mapToRegistry   type: 'tag' }
+32 silly mapToRegistry uri https://registry.npmjs.org/gulp-concat
+33 verbose addNameTag registry:https://registry.npmjs.org/gulp-concat not in flight; fetching
+34 silly cache add parsed spec Result {
+34 silly cache add   raw: 'gulp-uglify',
+34 silly cache add   scope: null,
+34 silly cache add   name: 'gulp-uglify',
+34 silly cache add   rawSpec: '',
+34 silly cache add   spec: 'latest',
+34 silly cache add   type: 'tag' }
+35 silly addNamed gulp-uglify@latest
+36 verbose addNamed "latest" is being treated as a dist-tag for gulp-uglify
+37 info addNameTag [ 'gulp-uglify', 'latest' ]
+38 silly mapToRegistry name gulp-uglify
+39 silly mapToRegistry using default registry
+40 silly mapToRegistry registry https://registry.npmjs.org/
+41 silly mapToRegistry data Result {
+41 silly mapToRegistry   raw: 'gulp-uglify',
+41 silly mapToRegistry   scope: null,
+41 silly mapToRegistry   name: 'gulp-uglify',
+41 silly mapToRegistry   rawSpec: '',
+41 silly mapToRegistry   spec: 'latest',
+41 silly mapToRegistry   type: 'tag' }
+42 silly mapToRegistry uri https://registry.npmjs.org/gulp-uglify
+43 verbose addNameTag registry:https://registry.npmjs.org/gulp-uglify not in flight; fetching
+44 silly cache add parsed spec Result {
+44 silly cache add   raw: 'gulp-rename',
+44 silly cache add   scope: null,
+44 silly cache add   name: 'gulp-rename',
+44 silly cache add   rawSpec: '',
+44 silly cache add   spec: 'latest',
+44 silly cache add   type: 'tag' }
+45 silly addNamed gulp-rename@latest
+46 verbose addNamed "latest" is being treated as a dist-tag for gulp-rename
+47 info addNameTag [ 'gulp-rename', 'latest' ]
+48 silly mapToRegistry name gulp-rename
+49 silly mapToRegistry using default registry
+50 silly mapToRegistry registry https://registry.npmjs.org/
+51 silly mapToRegistry data Result {
+51 silly mapToRegistry   raw: 'gulp-rename',
+51 silly mapToRegistry   scope: null,
+51 silly mapToRegistry   name: 'gulp-rename',
+51 silly mapToRegistry   rawSpec: '',
+51 silly mapToRegistry   spec: 'latest',
+51 silly mapToRegistry   type: 'tag' }
+52 silly mapToRegistry uri https://registry.npmjs.org/gulp-rename
+53 verbose addNameTag registry:https://registry.npmjs.org/gulp-rename not in flight; fetching
+54 verbose request uri https://registry.npmjs.org/gulp_jshint
+55 verbose request no auth needed
+56 info attempt registry request try #1 at 16:27:15
+57 verbose request id 9aa3b3edb8810102
+58 http request GET https://registry.npmjs.org/gulp_jshint
+59 verbose request uri https://registry.npmjs.org/gulp-concat
+60 verbose request no auth needed
+61 info attempt registry request try #1 at 16:27:15
+62 http request GET https://registry.npmjs.org/gulp-concat
+63 verbose request uri https://registry.npmjs.org/gulp-uglify
+64 verbose request no auth needed
+65 info attempt registry request try #1 at 16:27:15
+66 http request GET https://registry.npmjs.org/gulp-uglify
+67 verbose request uri https://registry.npmjs.org/gulp-rename
+68 verbose request no auth needed
+69 info attempt registry request try #1 at 16:27:15
+70 http request GET https://registry.npmjs.org/gulp-rename
+71 http 200 https://registry.npmjs.org/gulp-uglify
+72 verbose headers { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+72 verbose headers   etag: '"8KADUKNX5JVPEQSGSFGZZKE2X"',
+72 verbose headers   'content-type': 'application/json',
+72 verbose headers   'content-encoding': 'gzip',
+72 verbose headers   'cache-control': 'max-age=300',
+72 verbose headers   'content-length': '9992',
+72 verbose headers   'accept-ranges': 'bytes',
+72 verbose headers   date: 'Mon, 26 Sep 2016 08:27:19 GMT',
+72 verbose headers   via: '1.1 varnish',
+72 verbose headers   age: '150',
+72 verbose headers   connection: 'keep-alive',
+72 verbose headers   'x-served-by': 'cache-ams4136-AMS',
+72 verbose headers   'x-cache': 'HIT',
+72 verbose headers   'x-cache-hits': '1',
+72 verbose headers   'x-timer': 'S1474878439.341174,VS0,VE0',
+72 verbose headers   vary: 'Accept-Encoding' }
+73 silly get cb [ 200,
+73 silly get   { server: 'CouchDB/1.6.1 (Erlang OTP/R16B03)',
+73 silly get     etag: '"8KADUKNX5JVPEQSGSFGZZKE2X"',
+73 silly get     'content-type': 'application/json',
+73 silly get     'content-encoding': 'gzip',
+73 silly get     'cache-control': 'max-age=300',
+73 silly get     'content-length': '9992',
+73 silly get     'accept-ranges': 'bytes',
+73 silly get     date: 'Mon, 26 Sep 2016 08:27:19 GMT',
+73 silly get     via: '1.1 varnish',
+73 silly get     age: '150',
+73 silly get     connection: 'keep-alive',
+73 silly get     'x-served-by': 'cache-ams4136-AMS',
+73 silly get     'x-cache': 'HIT',
+73 silly get     'x-cache-hits': '1',
+73 silly get     'x-timer': 'S1474878439.341174,VS0,VE0',
+73 silly get     vary: 'Accept-Encoding' } ]
+74 verbose get saving gulp-uglify to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-uglify\.cache.json
+75 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+76 silly addNameTag next cb for gulp-uglify with tag latest
+77 silly addNamed gulp-uglify@2.0.0
+78 verbose addNamed "2.0.0" is a plain semver version for gulp-uglify
+79 silly mapToRegistry name gulp-uglify
+80 silly mapToRegistry using default registry
+81 silly mapToRegistry registry https://registry.npmjs.org/
+82 silly mapToRegistry data Result {
+82 silly mapToRegistry   raw: 'gulp-uglify',
+82 silly mapToRegistry   scope: null,
+82 silly mapToRegistry   name: 'gulp-uglify',
+82 silly mapToRegistry   rawSpec: '',
+82 silly mapToRegistry   spec: 'latest',
+82 silly mapToRegistry   type: 'tag' }
+83 silly mapToRegistry uri https://registry.npmjs.org/gulp-uglify
+84 verbose addRemoteTarball https://registry.npmjs.org/gulp-uglify/-/gulp-uglify-2.0.0.tgz not in flight; adding
+85 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp-uglify/-/gulp-uglify-2.0.0.tgz',
+85 verbose addRemoteTarball   'cbe4aae4fe0b6bdd760335bc46f200fff699c4af' ]
+86 info retry fetch attempt 1 at 16:27:17
+87 info attempt registry request try #1 at 16:27:17
+88 http fetch GET https://registry.npmjs.org/gulp-uglify/-/gulp-uglify-2.0.0.tgz
+89 http 200 https://registry.npmjs.org/gulp-rename
+90 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+90 verbose headers   etag: '"GF7U8KP5C762FV2X88D55T7D"',
+90 verbose headers   'content-type': 'application/json',
+90 verbose headers   'content-encoding': 'gzip',
+90 verbose headers   'cache-control': 'max-age=300',
+90 verbose headers   'content-length': '4264',
+90 verbose headers   'accept-ranges': 'bytes',
+90 verbose headers   date: 'Mon, 26 Sep 2016 08:27:19 GMT',
+90 verbose headers   via: '1.1 varnish',
+90 verbose headers   age: '126',
+90 verbose headers   connection: 'keep-alive',
+90 verbose headers   'x-served-by': 'cache-ams4132-AMS',
+90 verbose headers   'x-cache': 'HIT',
+90 verbose headers   'x-cache-hits': '2',
+90 verbose headers   'x-timer': 'S1474878439.438260,VS0,VE0',
+90 verbose headers   vary: 'Accept-Encoding' }
+91 silly get cb [ 200,
+91 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+91 silly get     etag: '"GF7U8KP5C762FV2X88D55T7D"',
+91 silly get     'content-type': 'application/json',
+91 silly get     'content-encoding': 'gzip',
+91 silly get     'cache-control': 'max-age=300',
+91 silly get     'content-length': '4264',
+91 silly get     'accept-ranges': 'bytes',
+91 silly get     date: 'Mon, 26 Sep 2016 08:27:19 GMT',
+91 silly get     via: '1.1 varnish',
+91 silly get     age: '126',
+91 silly get     connection: 'keep-alive',
+91 silly get     'x-served-by': 'cache-ams4132-AMS',
+91 silly get     'x-cache': 'HIT',
+91 silly get     'x-cache-hits': '2',
+91 silly get     'x-timer': 'S1474878439.438260,VS0,VE0',
+91 silly get     vary: 'Accept-Encoding' } ]
+92 verbose get saving gulp-rename to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-rename\.cache.json
+93 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+94 silly addNameTag next cb for gulp-rename with tag latest
+95 silly addNamed gulp-rename@1.2.2
+96 verbose addNamed "1.2.2" is a plain semver version for gulp-rename
+97 silly mapToRegistry name gulp-rename
+98 silly mapToRegistry using default registry
+99 silly mapToRegistry registry https://registry.npmjs.org/
+100 silly mapToRegistry data Result {
+100 silly mapToRegistry   raw: 'gulp-rename',
+100 silly mapToRegistry   scope: null,
+100 silly mapToRegistry   name: 'gulp-rename',
+100 silly mapToRegistry   rawSpec: '',
+100 silly mapToRegistry   spec: 'latest',
+100 silly mapToRegistry   type: 'tag' }
+101 silly mapToRegistry uri https://registry.npmjs.org/gulp-rename
+102 verbose addRemoteTarball https://registry.npmjs.org/gulp-rename/-/gulp-rename-1.2.2.tgz not in flight; adding
+103 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp-rename/-/gulp-rename-1.2.2.tgz',
+103 verbose addRemoteTarball   '3ad4428763f05e2764dec1c67d868db275687817' ]
+104 info retry fetch attempt 1 at 16:27:17
+105 info attempt registry request try #1 at 16:27:17
+106 http fetch GET https://registry.npmjs.org/gulp-rename/-/gulp-rename-1.2.2.tgz
+107 http fetch 200 https://registry.npmjs.org/gulp-uglify/-/gulp-uglify-2.0.0.tgz
+108 silly fetchAndShaCheck shasum cbe4aae4fe0b6bdd760335bc46f200fff699c4af
+109 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-4044-41fd99d0\registry.npmjs.org\gulp-uglify\-\gulp-uglify-2.0.0.tgz not in flight; adding
+110 verbose addTmpTarball already have metadata; skipping unpack for gulp-uglify@2.0.0
+111 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+112 silly cache afterAdd gulp-uglify@2.0.0
+113 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\gulp-uglify\2.0.0\package\package.json not in flight; writing
+114 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+115 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\gulp-uglify\2.0.0\package\package.json written
+116 http 200 https://registry.npmjs.org/gulp-concat
+117 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+117 verbose headers   etag: '"2YV59NCE55XUEUNY7Q9OPY1F3"',
+117 verbose headers   'content-type': 'application/json',
+117 verbose headers   'content-encoding': 'gzip',
+117 verbose headers   'cache-control': 'max-age=300',
+117 verbose headers   'content-length': '7923',
+117 verbose headers   'accept-ranges': 'bytes',
+117 verbose headers   date: 'Mon, 26 Sep 2016 08:27:19 GMT',
+117 verbose headers   via: '1.1 varnish',
+117 verbose headers   age: '236',
+117 verbose headers   connection: 'keep-alive',
+117 verbose headers   'x-served-by': 'cache-ams4421-AMS',
+117 verbose headers   'x-cache': 'HIT',
+117 verbose headers   'x-cache-hits': '2',
+117 verbose headers   'x-timer': 'S1474878439.329378,VS0,VE0',
+117 verbose headers   vary: 'Accept-Encoding' }
+118 silly get cb [ 200,
+118 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+118 silly get     etag: '"2YV59NCE55XUEUNY7Q9OPY1F3"',
+118 silly get     'content-type': 'application/json',
+118 silly get     'content-encoding': 'gzip',
+118 silly get     'cache-control': 'max-age=300',
+118 silly get     'content-length': '7923',
+118 silly get     'accept-ranges': 'bytes',
+118 silly get     date: 'Mon, 26 Sep 2016 08:27:19 GMT',
+118 silly get     via: '1.1 varnish',
+118 silly get     age: '236',
+118 silly get     connection: 'keep-alive',
+118 silly get     'x-served-by': 'cache-ams4421-AMS',
+118 silly get     'x-cache': 'HIT',
+118 silly get     'x-cache-hits': '2',
+118 silly get     'x-timer': 'S1474878439.329378,VS0,VE0',
+118 silly get     vary: 'Accept-Encoding' } ]
+119 verbose get saving gulp-concat to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npmjs.org\gulp-concat\.cache.json
+120 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+121 silly addNameTag next cb for gulp-concat with tag latest
+122 silly addNamed gulp-concat@2.6.0
+123 verbose addNamed "2.6.0" is a plain semver version for gulp-concat
+124 silly mapToRegistry name gulp-concat
+125 silly mapToRegistry using default registry
+126 silly mapToRegistry registry https://registry.npmjs.org/
+127 silly mapToRegistry data Result {
+127 silly mapToRegistry   raw: 'gulp-concat',
+127 silly mapToRegistry   scope: null,
+127 silly mapToRegistry   name: 'gulp-concat',
+127 silly mapToRegistry   rawSpec: '',
+127 silly mapToRegistry   spec: 'latest',
+127 silly mapToRegistry   type: 'tag' }
+128 silly mapToRegistry uri https://registry.npmjs.org/gulp-concat
+129 verbose addRemoteTarball https://registry.npmjs.org/gulp-concat/-/gulp-concat-2.6.0.tgz not in flight; adding
+130 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp-concat/-/gulp-concat-2.6.0.tgz',
+130 verbose addRemoteTarball   '585cfb115411f348773131140566b6a81c69cb91' ]
+131 info retry fetch attempt 1 at 16:27:17
+132 info attempt registry request try #1 at 16:27:17
+133 http fetch GET https://registry.npmjs.org/gulp-concat/-/gulp-concat-2.6.0.tgz
+134 http fetch 200 https://registry.npmjs.org/gulp-rename/-/gulp-rename-1.2.2.tgz
+135 silly fetchAndShaCheck shasum 3ad4428763f05e2764dec1c67d868db275687817
+136 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-4044-41fd99d0\registry.npmjs.org\gulp-rename\-\gulp-rename-1.2.2.tgz not in flight; adding
+137 verbose addTmpTarball already have metadata; skipping unpack for gulp-rename@1.2.2
+138 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+139 silly cache afterAdd gulp-rename@1.2.2
+140 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\gulp-rename\1.2.2\package\package.json not in flight; writing
+141 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+142 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\gulp-rename\1.2.2\package\package.json written
+143 http fetch 200 https://registry.npmjs.org/gulp-concat/-/gulp-concat-2.6.0.tgz
+144 silly fetchAndShaCheck shasum 585cfb115411f348773131140566b6a81c69cb91
+145 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-4044-41fd99d0\registry.npmjs.org\gulp-concat\-\gulp-concat-2.6.0.tgz not in flight; adding
+146 verbose addTmpTarball already have metadata; skipping unpack for gulp-concat@2.6.0
+147 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+148 silly cache afterAdd gulp-concat@2.6.0
+149 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\gulp-concat\2.6.0\package\package.json not in flight; writing
+150 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+151 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\gulp-concat\2.6.0\package\package.json written
+152 http 404 https://registry.npmjs.org/gulp_jshint
+153 verbose headers { 'content-type': 'application/json',
+153 verbose headers   'cache-control': 'max-age=0',
+153 verbose headers   'content-length': '2',
+153 verbose headers   'accept-ranges': 'bytes',
+153 verbose headers   date: 'Mon, 26 Sep 2016 08:27:21 GMT',
+153 verbose headers   via: '1.1 varnish',
+153 verbose headers   age: '0',
+153 verbose headers   connection: 'keep-alive',
+153 verbose headers   'x-served-by': 'cache-ams4424-AMS',
+153 verbose headers   'x-cache': 'MISS',
+153 verbose headers   'x-cache-hits': '0',
+153 verbose headers   'x-timer': 'S1474878441.343075,VS0,VE95',
+153 verbose headers   vary: 'Accept-Encoding' }
+154 silly get cb [ 404,
+154 silly get   { 'content-type': 'application/json',
+154 silly get     'cache-control': 'max-age=0',
+154 silly get     'content-length': '2',
+154 silly get     'accept-ranges': 'bytes',
+154 silly get     date: 'Mon, 26 Sep 2016 08:27:21 GMT',
+154 silly get     via: '1.1 varnish',
+154 silly get     age: '0',
+154 silly get     connection: 'keep-alive',
+154 silly get     'x-served-by': 'cache-ams4424-AMS',
+154 silly get     'x-cache': 'MISS',
+154 silly get     'x-cache-hits': '0',
+154 silly get     'x-timer': 'S1474878441.343075,VS0,VE95',
+154 silly get     vary: 'Accept-Encoding' } ]
+155 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/gulp_jshint
+155 verbose stack     at makeError (D:\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+155 verbose stack     at CachingRegistryClient.<anonymous> (D:\node_modules\npm\node_modules\npm-registry-client\lib\request.js:242:14)
+155 verbose stack     at Request._callback (D:\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+155 verbose stack     at Request.self.callback (D:\node_modules\npm\node_modules\request\request.js:200:22)
+155 verbose stack     at emitTwo (events.js:87:13)
+155 verbose stack     at Request.emit (events.js:172:7)
+155 verbose stack     at Request.<anonymous> (D:\node_modules\npm\node_modules\request\request.js:1067:10)
+155 verbose stack     at emitOne (events.js:82:20)
+155 verbose stack     at Request.emit (events.js:169:7)
+155 verbose stack     at IncomingMessage.<anonymous> (D:\node_modules\npm\node_modules\request\request.js:988:12)
+156 verbose statusCode 404
+157 verbose pkgid gulp_jshint
+158 verbose cwd D:\Git\ljypro\web
+159 error Windows_NT 6.1.7601
+160 error argv "D:\\node.exe" "D:\\node_modules\\npm\\bin\\npm-cli.js" "install" "gulp_jshint" "gulp-concat" "gulp-uglify" "gulp-rename" "--save-dev"
+161 error node v4.5.0
+162 error npm  v2.15.9
+163 error code E404
+164 error 404 Registry returned 404 for GET on https://registry.npmjs.org/gulp_jshint
+164 error 404
+164 error 404 'gulp_jshint' is not in the npm registry.
+164 error 404 You should bug the author to publish it (or use the name yourself!)
+164 error 404
+164 error 404 Note that you can also install from a
+164 error 404 tarball, folder, http url, or git url.
+165 verbose exit [ 1, true ]

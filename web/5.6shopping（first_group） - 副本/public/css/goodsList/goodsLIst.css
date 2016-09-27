@@ -1,0 +1,163 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: #edf0f3 !important;
+    font-family: "rooney-web",Georgia,"Times New Roman",Times,serif !important;
+}
+/*放大镜特效*/
+.zoom{display:inline-block;}
+/*距上一个单元的高度*/
+.margin-top{
+    margin-top:100px;
+}
+.margin-top1{
+    margin-top: 40px;
+}
+.margin-top2{
+    margin-top: 30px;
+}
+.margin-top3{
+    margin-top: 10px;
+}
+/*标题字号*/
+.font_title1{
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.font_title2{
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 900;
+}
+#goodsCart{
+    display: none;
+}
+/*字体样式*/
+.font_style1{
+    font-size: 15px;
+    line-height: 20px;
+}
+.font_style3{
+    font-size: 18px;
+    line-height: 25px;
+    color: #1d901d;
+}
+.font_style4{
+    font-size: 15px;
+    line-height: 50px;
+}
+.font_style5{
+    font-size: 15px;
+    line-height: 20px;
+}
+.font_style6{
+    font-size: 15px;
+    line-height: 20px;
+    color: #999999;
+}
+.wine_show{
+    height: 570px;
+    width: 630px;
+    border: 1px solid #000000;
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    visibility: hidden;
+}
+/*a标签处理*/
+.a_color{
+    color: #b42424 ;
+}
+.a_color:hover{
+    text-decoration: none !important;
+    color: #741717 !important;
+}
+
+/*价格*/
+.price{
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 0.5em;
+    padding: 40px 0;
+}
+/*添加按钮*/
+.addBut{
+    margin-top: 40px !important;
+    background: #B42424;
+    border-color: #B42424;
+    color: #ffffff !important;
+    padding: 6px 20px;
+    cursor: pointer;
+}
+.addBut:hover{
+    background: #741717;
+}
+/*分割线*/
+.border-bottom{
+    line-height: 50px;
+    margin: 0 auto 20px;
+    border-bottom: 1px solid lightGrey;
+    padding: 0 0 8px 0;
+}
+.a_but{
+    background: #00b3e2;
+    color: #ffffff;
+}
+.a_but:hover{
+    color: #ffffff !important;
+    background: #0090b2;
+}
+/*评论部分d*/
+.notDiscuss{
+    display: none;
+}
+.border{
+    border: 1px solid #999999;
+}
+.border1{
+    border: 1px solid #999999;
+    border-bottom: none;
+    border-bottom: 1px solid #999999;
+}
+.border2{
+    border: 1px solid #999999;
+    border-top: none;
+}
+.background1{
+    background: #f3ffe6;
+}
+.stars ul li{
+    list-style: none !important;
+    float: left;
+    left: 5px;
+    color: #cfcfcf;
+    cursor: pointer;
+}
+/*分页*/
+.page{
+    display: inline-block;
+}
+.but_margin{
+    margin: auto 1px;
+}
+@media screen and (max-width:768px) {
+    .font_title1{
+        font-size: 20px;
+    }
+    /*价格*/
+    .price{
+        font-size: 20px;
+        line-height: 20px;
+        padding: 20px 0;
+    }
+    /*按钮*/
+    .addBut{
+        margin-top: 20px;
+    }
+    .font_title2{
+        font-size: 18px;
+    }
+}

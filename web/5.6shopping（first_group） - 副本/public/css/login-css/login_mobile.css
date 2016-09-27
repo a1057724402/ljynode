@@ -1,0 +1,20 @@
+
+
+/*手机终端样式 <768px xs*/
+@media screen and(max-width: 768px),screen and (max-device-width:768px){
+    /*消除手机端时 content与导航间空白*/
+    .content{
+        margin-top: 0;
+/*        height: auto;
+*/    }
+    .content{
+/*        background: url("../../img/login-img/login-img.jpg") no-repeat top center;
+*/            
+}
+    .content .row .loginDiv, .content .row .registerDiv{
+            margin: 0 20px 0 0;
+    }
+    body > #footer{
+        margin-top: 0;
+    }
+}

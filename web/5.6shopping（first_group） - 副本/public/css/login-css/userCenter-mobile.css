@@ -1,0 +1,45 @@
+
+@media screen and (max-width: 768px),screen and (max-device-width:768px){
+
+    #wrapper{
+        margin-top: 100px;
+        min-height: 400px;
+    }
+    #wrapper .address,#wrapper .basicInfo{
+        display: block;
+        margin: 20px 0;
+    }
+
+
+    #wrapper .address{
+        background: #bfe7c0;
+    }
+    #wrapper .address .addAddrDiv{
+        background: #fff;
+        padding: 5px;
+    }
+    #wrapper .address .addAddrDiv input{
+        font-size: 12px;
+    }
+    #wrapper .address .addAddrDiv .addAddr-btn{
+        margin: 10px 0;
+        background: #21c7fb;
+    }
+
+    #wrapper .basicInfo{
+        display: block;
+        margin: 20px 0;
+    }
+
+
+    #wrapper .address:target,#wrapper .basicInfo:target{
+        padding-top: 100px ;
+    }
+
+
+    /*移动端 用户中心导航*/
+    #wrapper .user-mobile-nav span{
+        background: #9dc29e;
+        line-height: 2em;
+    }
+}

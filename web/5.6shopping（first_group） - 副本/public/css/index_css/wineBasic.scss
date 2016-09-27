@@ -1,0 +1,443 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+//ul li{
+//  list-style: none;
+//}
+
+
+/*set font */
+@mixin h1Font{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 50px;
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+}
+@mixin h2Font{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 42px;
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+}
+@mixin h3Font{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+}
+@mixin h4Font{
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 32px;
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+}
+@mixin h5Font{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 27px;
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+}
+@mixin p1Font{
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+  font-size: 16px;
+  line-height: 27px;
+  color: #333;
+}
+@mixin aFont{
+  color: #b42424;
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+  font-size: 16px;
+}
+@mixin aHoveFont{
+  color: #741717;
+  font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+  font-size: 16px;
+}
+
+
+body{
+  background: #edf0f3;
+}
+.wb_contentFrameOut{
+  background: #ffffff;
+  position: relative;
+  top: 120px;
+  margin-bottom: 120px;
+}
+
+.wb_contentFrameOut{
+  hr{
+    margin-bottom:50px ;
+  }
+  .content_1{
+    h1{
+      @include h1Font;
+    }
+  }
+  .content_2{
+    div{
+      img{
+        width: 300px ;
+        height: 300px;
+      }
+      div{
+        h2{
+          @include h2Font;
+        }
+        p{
+          @include p1Font;
+        }
+        h3{
+          border: 1px solid #ddd;
+          border-radius:4px ;
+          padding: 4px;
+          line-height: 27px;
+          box-shadow: 1px 1px 1px 1px #ddd;
+          a{
+            text-decoration: none;
+            p{
+              color: #b42424;
+              @include h3Font;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content_3{
+    h4{
+      @include h4Font;
+    }
+    div{
+      ul{
+        li{
+          list-style: inherit;
+          line-height: 27px;
+          a{
+            font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+            font-size: 16px;
+            color: #b42424;
+          }
+          a:hover{
+            font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+            font-size: 16px;
+            color: #741717;
+          }
+        }
+      }
+      img{
+        border: 1px solid rgba(0,0,0,0.2);
+        padding: 4px;
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+  .content_4{
+    h2{
+      @include h2Font;
+    }
+    div{
+      img{
+        border: 1px solid rgba(0,0,0,0.2);
+        padding: 4px;
+        width: 350px;
+        height: 250px;
+      }
+      div{
+        p{
+          @include p1Font;
+        }
+        h3{
+          @include h3Font;
+          a{
+            color: #b42424;
+          }
+          a:hover{
+            color: #741717;
+          }
+        }
+      }
+    }
+  }
+  .content_5,.content_6,.content_7{
+    h2{
+      margin-top: 40px;
+      @include h2Font;
+    }
+    div{
+      img{
+        border: 1px solid rgba(0,0,0,0.2);
+        padding: 4px;
+        width: 380px;
+//        height: 250px;
+      }
+      div{
+        p{
+          @include p1Font;
+        }
+        h3{
+          @include h3Font;
+          a{
+            color: #b42424;
+          }
+          a:hover{
+            color: #741717;
+          }
+        }
+        li{
+          list-style: none;
+          line-height: 27px;
+            a{
+              @include aFont;
+            }
+            a:hover{
+              @include aHoveFont;
+            }
+        }
+      }
+    }
+  }
+  .content_7{
+      div{
+        div{
+          li{
+            list-style: inherit;
+
+          }
+        }
+      }
+  }
+  .content_8_1{
+      padding: 20px;
+    background:#f5f5f5;
+    border-radius: 10px;
+    strong{
+      @include p1Font;
+
+    }
+    p{
+      @include p1Font;
+    }
+    a{
+      @include aFont;
+    }
+    a:hover{
+      @include aHoveFont;
+    }
+
+  }
+  .content_9{
+    h3{
+      @include h3Font;
+    }
+    div{
+      div{
+        h5{
+          @include h5Font;
+        }
+        p{
+          @include p1Font;
+        }
+      }
+    }
+  }
+  .content_10_1{
+    margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    h2{
+      @include h2Font;
+    }
+    p{
+      @include p1Font;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wb_contentFrameOut{
+
+    background: #ffffff;
+    position: relative;
+    top: 60px;
+    margin-bottom: 120px;
+  }
+  .wb_contentFrameOut{
+    hr{
+      margin-bottom: 2px;
+
+    }
+    .content_1{
+      h1{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+      }
+    }
+    .content_2{
+      div{
+        img{
+          width: 200px ;
+          height: 200px;
+        }
+        div{
+          h2{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 25px;
+            font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+          }
+          p{
+
+          }
+          h3{
+            border: 1px solid #ddd;
+            border-radius:4px ;
+            padding: 4px;
+            line-height: 20px;
+            box-shadow: 1px 1px 1px 1px #ddd;
+            a{
+              text-decoration: none;
+              p{
+                font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+                font-size: 14px;
+                line-height: 20px;
+                color: #b42424;
+
+              }
+            }
+          }
+        }
+      }
+    }
+    .content_3{
+      h4{
+        @include h4Font;
+      }
+      div{
+        ul{
+          li{
+            list-style: none;
+            line-height: 27px;
+            a{
+              font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+              font-size: 16px;
+              color: #b42424;
+            }
+            a:hover{
+              font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+              font-size: 16px;
+              color: #741717;
+            }
+          }
+        }
+        img{
+          border: 1px solid rgba(0,0,0,0.2);
+          padding: 4px;
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+    .content_4{
+      h2{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+      }
+      div{
+        img{
+          border: 1px solid rgba(0,0,0,0.2);
+          padding: 4px;
+          width: 250px;
+          height: 250px;
+        }
+        div{
+          p{
+            @include p1Font;
+          }
+          h3{
+            font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+            font-size: 18px;
+            line-height: 20px;
+//            color: #b42424;
+            a{
+              color: #b42424;
+            }
+            a:hover{
+              color: #741717;
+            }
+          }
+        }
+      }
+    }
+    .content_5,.content_6,.content_7{
+      h2{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+      }
+      div{
+        img{
+          border: 1px solid rgba(0,0,0,0.2);
+          padding: 4px;
+          width: 250px;
+          //        height: 250px;
+        }
+        div{
+          p{
+            @include p1Font;
+          }
+          h3{
+            font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+            font-size: 18px;
+            line-height: 20px;
+            a{
+              color: #b42424;
+            }
+            a:hover{
+              color: #741717;
+            }
+          }
+          li{
+            list-style: none;
+            line-height: 27px;
+            a{
+              @include aFont;
+            }
+            a:hover{
+              @include aHoveFont;
+            }
+          }
+        }
+      }
+    }
+    .content_10_1{
+      margin:  0;
+      padding: 2px;
+//      border: 1px solid #ddd;
+      border-radius: 10px;
+      h2{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        font-family: "rooney-web",Georgia,"Times New Roman",Times,serif;
+      }
+      p{
+        @include p1Font;
+      }
+      form{
+        input{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

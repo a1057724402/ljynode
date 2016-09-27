@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--手机中需要引入的-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+    <!--公共引入-->
+    <link rel="stylesheet" href="css/css_public/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.css.map" type="text/css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.min.css" type="text/css"/>
+    <link rel="stylesheet" href="css/head_foot_css/head_foot.css"/>
+    <link rel="stylesheet" href="css/shopping_css/shoppingCart.css" type="text/css">
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/shopping_js/shoppingCart.js" type="text/javascript"></script>
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/login_js/getSession.js"></script>
+    <!--结束-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js" type="text/javascript"></script>
+    <script src="js/respond.min.js" type="text/javascript"></script>
+    <![endif]-->
+</head>
+<body>
+<a name="gohead"></a>
+<div style="height: 1px"></div>
+
+<!--back to top-->
+<div class="backToTop visible-md" onclick="backTop()">
+    <div class="backToTop_img"></div>
+</div>
+
+<div id="header" class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="row col-md-12 col-xs-12">
+            <div class="head_logo col-md-3 col-xs-3 visible-md">
+                <a href="#"><img src="img/head_foot/logo.png" alt="logo"/></a>
+            </div>
+            <div class="head_loginRegister col-md-6 col-md-offset-3  ">
+                <!--<input type="button" value="Login" />-->
+                <!--<input type="button" value="Register"/>-->
+                <p class="col-md-12">
+                    <strong class="col-md-3 visible-md">Hi!&nbsp;hello:&nbsp;&nbsp;</strong>
+                    <span id="sessionSpan" class="col-md-3 ">请登录！</span>
+
+                    <input type="button" value="退出" onclick="outSession()" class="col-md-1  "/>
+
+                    <small class="col-md-4 visible-md" onclick="personalCenterOne()"><a href="#">[个人中心]</a></small>
+                </p>
+            </div>
+            <div class="head_button col-md-3 col-xs-7 col-xs-offset-2 visible-xs" >
+                <input type="button"  value="菜单" data-toggle="collapse" data-target=".nav-collapse">
+                <a href="login.html"><input type="button" value="登陆"/></a>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-md">
+            <div class="head_nav ">
+                <ul class="col-md-10 col-xs-4 nav pull-right nav-pills  ">
+                    <li ><a href="login.html">登陆/注册</a></li>
+                    <!--<li><a href="aboutUs.html">关于我们</a></li>-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            关于 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="wineBasic.html">信息&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="browse.html">浏览&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="aboutUs.html">关于我们&emsp;&emsp;</a></li>
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li class="active"><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <li><a href="index.html">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-xs">
+            <div class="head_nav1 nav-collapse collapse">
+                <ul class=" col-xs-12 col-xs-offset-2 nav pull-left">
+                    <li><a href="index.html">首页</a></li>
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <!--<li><a href="login.html">登陆/注册</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<section ng-controller="mainTableCtrl" class="container shoppingCartTable">
+    <p>
+        <br/>
+        <br/>
+    </p>
+    <p ng-if="!isInit" class="noItem">购物车里没有物品，<a href="index.html">点击这里</a>继续购物</p>
+    <table class="table col-md-12 col-xs-12" ng-if="isInit">
+        <tr class="tableHead">
+            <td class="col1 hidden-xs"><input type="checkbox" checked="checked" ng-click="selectall()" id="allCheckbox"/>全选</td>
+            <td class="col1">商品<br class="visible-xs"/>图片</td>
+            <td class="col1">商品<br class="visible-xs"/>名称</td>
+            <td class="hidden-xs ">商品<br class="visible-xs"/>信息</td>
+            <td class="col1">商品<br class="visible-xs"/>价格</td>
+            <td class="col1">商品<br class="visible-xs"/>数量</td>
+            <td class="hidden-xs col1">总价</td>
+            <td class="col1">操作</td>
+        </tr>
+        <tr ng-repeat="data in items" class="tableItems">
+            <td class="hidden-xs"><input type="checkbox" ng-model="items[$index].check" ng-change="changesselect()"/></td>
+            <td><img ng-src="{{data.imgSrc}}" alt="" width="50px" height="50px"/></td>
+            <td ng-bind="data.name"></td>
+            <td ng-bind="data.text" class="hidden-xs"></td>
+            <td ng-bind="data.price"></td>
+            <td>
+                <button ng-click="changenum(data,$index,'-')" class="hidden-xs">-</button>
+                <input type="text" class="counts" ng-model="items[$index].num" onkeyup="this.value=this.value.replace(/[^\d\.]/g,'')" ng-change="changenum(data,$index)" style="text-align: center"/>
+                <button ng-click="changenum(data,$index,'+')" class="hidden-xs">+</button>
+            </td>
+            <td class="hidden-xs" ng-bind="items[$index].allPrice"></td>
+            <td>
+                <a ng-click="deleteItem(data.id)" class="hoverCurser">删除</a>
+            </td>
+        </tr>
+    </table>
+    <div ng-if="ifpages&&isInit" class="visible-md">
+        <button disabled="">上一页</button>
+        <div ng-repeat="page in pages">
+            <button disabled="">{{page}}</button>
+        </div>
+        <button >下一页</button>
+    </div>
+    <div class="col-xs-12 col-md-12 counter" ng-if="isInit">
+        <p>每件商品一次最多购买20件</p>
+        <p class="itemCount">共<span ng-bind="finalc"></span>件商品，共计<span ng-bind="finalp">0</span>元</p>
+        <a class="payment hoverCurser" ng-click="submitorder()">前往付款</a>
+    </div>
+</section>
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+                    <img src="img/head_foot/footLogn.png" alt="logo"/>
+                    <p>We produce wine videos, articles, and educational courses. Creating wine smarts since 2011</p>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h5>COMPANY</h5>
+                    <ul>
+                        <li><a href="#">About Wine</a></li>
+                        <li><a href="#">Follya</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h5>TRADE & MEDIA</h5>
+                    <ul>
+                        <li><a href="#">Submit a</a></li>
+                        <li><a href="#">Wine</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><a href="#">Lucensing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <h5>HOUSE RULES</h5>
+                    <ul>
+                        <li><a href="#">Code of</a></li>
+                        <li><a href="#">Ethics</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-xs-12">
+                    <a href="#">Back to top</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

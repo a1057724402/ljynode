@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>商城注册/登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 公用css样式表 -->
+    <link rel="stylesheet" href="css/css_public/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.css.map"/>
+    <link rel="stylesheet" href="css/css_public/bootstrap-theme.min.css"/>
+    <!-- 局部样式 -->
+    <link rel="stylesheet" href="css/head_foot_css/head_foot.css"/>
+    <link rel="stylesheet" href="css/login-css/login.css">
+    <link rel="stylesheet" href="css/login-css/login_mobile.css">
+    <!-- 公用js -->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script src="js/login_js/getSession.js"></script>
+</head>
+<body>
+<!-- 头部导航 开始 -->
+<a name="gohead"></a>
+<div style="height: 1px"></div>
+
+<!--back to top-->
+<div class="backToTop visible-md" onclick="backTop()">
+    <div class="backToTop_img"></div>
+</div>
+
+<div id="header" class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="row col-md-12 col-xs-12">
+            <div class="head_logo col-md-3 col-xs-3">
+                <a href="#"><img src="img/head_foot/logo.png" alt="logo"/></a>
+            </div>
+            <div class="head_loginRegister col-md-6 col-md-offset-3  visible-md">
+                <!--<input type="button" value="Login" />-->
+                <!--<input type="button" value="Register"/>-->
+                <p class="col-md-12">
+                    <strong class="col-md-3">Hi!&nbsp;hello:&nbsp;&nbsp;</strong>
+                    <span id="sessionSpan" class="col-md-3">请登录！</span>
+
+                    <input type="button" value="退出" onclick="outSession()" class="col-md-1"/>
+                    <small class="col-md-4" onclick="personalCenterOne()"><a href="#">[个人中心]</a></small>
+                </p>
+            </div>
+            <div class="head_button col-md-3 col-xs-7 col-xs-offset-2 visible-xs" >
+                <input type="button"  value="菜单" data-toggle="collapse" data-target=".nav-collapse">
+                <a href="login.html"><input type="button" value="登陆"/></a>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-md">
+            <div class="head_nav ">
+                <ul class="col-md-10 col-xs-4 nav pull-right nav-pills  ">
+                    <li class="active"><a href="login.html">登陆/注册</a></li>
+                    <!--<li><a href="aboutUs.html">关于我们</a></li>-->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            关于 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="wineBasic.html">信息&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="browse.html">浏览&emsp;&emsp;&emsp;&emsp;</a></li>
+                            <li><a href="aboutUs.html">关于我们&emsp;&emsp;</a></li>
+                        </ul>
+                    </li>
+
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <li><a href="index.html">首页</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row col-md-12 col-xs-12 visible-xs">
+            <div class="head_nav1 nav-collapse collapse">
+                <ul class=" col-xs-12 col-xs-offset-2 nav pull-left">
+                    <li><a href="index.html">首页</a></li>
+                    <!--<li><a href="wineBasic.html">WineBasics</a></li>-->
+                    <!--<li><a href="browse.html">Browse</a></li>-->
+                    <li><a href="goodsInfo.html">所有商品</a></li>
+                    <!--点击商品进入goodsList-->
+                    <!--<li><a href="goodsList.html">Lists</a></li>-->
+                    <li><a href="shoppingCart.html">购物车</a></li>
+                    <!--<li><a href="payment.html">Payment</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <!--<li><a href="login.html">登陆/注册</a></li>-->
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- 头部结束 -->
+    <!-- 手机等低于768px的小屏幕时 显示的菜单按钮 -->
+    <div id="mobile-btn" class="visible-xs">
+        <a href="index.html"><button class="btn">
+            <span class="home glyphicon glyphicon-home"></span></button>
+        </a>
+    </div>
+<!-- 主要内容 content开始 -->
+    <div class="container content">
+    <!-- login页图片展示区 -->    
+        <div id="imgs" class="row visible-md col-md-6">        
+
+        </div>
+        <!--<form action="" name="myForm" ng-controller="LoginInfo">-->
+            <!--<label>hello</label>-->
+            <!--<input type="text" placeholder="hello" name="userName" required ng-model="userName"/>-->
+            <!--<span ng-show="myForm.userName.$error.required">帐号不能为空</span>-->
+        <!--</form>-->
+
+    <!-- 登录框 -->        
+        <div class="row col-md-6 col-md-push-3">
+            <div class="row">
+                <div class="loginDiv col-md-6 col-xs-12" id="loginDiv">
+                        <form name="myForm" ng-controller="LoginInfo">
+                            <fieldset>
+                                <legend>登录</legend>
+                                <div>
+                                    <label for="name">账号</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                        <input type="text" required id="name" name="name" ng-model="userName"
+                                               class="form-control"  placeholder="输入帐号"/>
+                                    </div>
+                                    <span class="wrong" ng-show="myForm.name.$error.required">帐号不能为空</span>
+                                    <br/>
+                                </div>
+
+                                <div>
+                                    <label for="pwd">密码</label>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                        <input type="password" id="pwd" name="pwd"
+                                               class="form-control" required placeholder="输入密码" ng-model="pwd"/>
+                                    </div>
+                                    <span class="wrong" ng-show="myForm.pwd.$error.required">密码不能为空</span>
+                                    <br/>
+                                </div>
+
+                                <input type="button" value="登录" class="btn btn-block loginBtn" ng-click="login(myForm.$valid)"/>
+                                <span class="wrong" >{{loginMsg}}</span>
+
+                                <div class="forgetDiv">
+                                    <span class="toRegister"><a href="register.html">快速注册</a></span>
+                                </div>
+                            </fieldset>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 底部 -->
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <img src="img/head_foot/footLogn.png" alt="logo"/>
+                <p>从2011年开始我们创建了网络艺术管理，主要包括我们生产的葡萄酒视频
+                    , 条款列表, 和有教育性的课程.
+                </p>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>企业</h5>
+                <ul>
+                    <li><a href="aboutUs.html">关于葡萄酒</a></li>
+                    <!--<li><a href="#">Follya</a></li>-->
+                    <li><a href="aboutUs.html">关于我们</a></li>
+                    <li><a href="aboutUs.html">我们的服务</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>商业 & 媒体</h5>
+                <ul>
+                    <li><a href="#">登陆我们的网站</a></li>
+                    <!--<li><a href="#">Wine</a></li>-->
+                    <li><a href="#">内容许可</a></li>
+                    <!--<li><a href="#">Lucensing</a></li>-->
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <h5>网站规则</h5>
+                <ul>
+                    <li><a href="#">法律法规</a></li>
+                    <!--<li><a href="#">Ethics</a></li>-->
+                    <li><a href="#">版权所有</a></li>
+                    <li><a href="#">使用条款</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12">
+                <a href="#gohead" >返回页面顶部</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!--public js文件-->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!--private js文件-->
+    <script type="text/javascript" src="js/login_js/login.js"></script>
+
+</body>
+</html>
